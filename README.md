@@ -1,4 +1,4 @@
-You will see four implementations of the same voxel game engine. the first is the most naive and the last is the least naive. This is an excellent showcase of the evolutionary journey of a game engine's architecture, moving from a simple, direct implementation to a highly structured, scalable design. It's a perfect case study in software engineering principles applied to game development.
+You will see five implementations of the same voxel game engine. the first is the most naive and the last is the least naive. This is an excellent showcase of the evolutionary journey of a game engine's architecture, moving from a simple, direct implementation to a highly structured, scalable design. It's a perfect case study in software engineering principles applied to game development.
 
 Here are my thoughts and observations on the progression.
 
