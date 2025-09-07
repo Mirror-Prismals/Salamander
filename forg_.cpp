@@ -1,7 +1,7 @@
-// ======================================================================
+//======================================================================
 // prismals_debug.cpp
 // A simplified, single-file debug world to showcase all block types
-// with a fly-mode camera and dynamic sky.
+// with a fly-mode camera and dynamic sky. (Corrected Shaders - FINAL)
 // ======================================================================
 
 #define GLM_ENABLE_EXPERIMENTAL
@@ -23,7 +23,7 @@ const unsigned int WINDOW_HEIGHT = 1080;
 const int NUM_BLOCK_TYPES = 25;
 
 // --- Global Variables ---
-glm::vec3 cameraPos = glm::vec3(0.0f, 5.0f, 15.0f);
+glm::vec3 cameraPos = glm::vec3(6.0f, 5.0f, 15.0f); // Adjusted starting position
 float cameraYaw = -90.0f;
 float pitch = 0.0f;
 float lastX = WINDOW_WIDTH / 2.0f;
@@ -37,6 +37,40 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xposIn, double yposIn);
 void processInput(GLFWwindow* window);
 GLuint compileShaderProgram(const char* vShaderSrc, const char* fShaderSrc);
+
+// ======================================================================
+// SHADER COMPILATION (Corrected)
+// ======================================================================
+GLuint compileShaderProgram(const char* vShaderSrc, const char* fShaderSrc) {
+    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vertexShader, 1, &vShaderSrc, NULL);
+    glCompileShader(vertexShader);
+    int success;
+    char infoLog[512];
+    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+    if (!success) { glGetShaderInfoLog(vertexShader, 512, NULL, infoLog); std::cout << "VERTEX SHADER ERROR\n" << infoLog << "\n"; }
+    
+    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragmentShader, 1, &fShaderSrc, NULL);
+    glCompileShader(fragmentShader);
+    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
+    if (!success) { glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog); std::cout << "FRAGMENT SHADER ERROR\n" << infoLog << "\n"; }
+    
+    GLuint program = glCreateProgram();
+    glAttachShader(program, vertexShader);
+    glAttachShader(program, fragmentShader);
+    glLinkProgram(program);
+    
+    glGetProgramiv(program, GL_LINK_STATUS, &success);
+    if (!success) {
+        glGetProgramInfoLog(program, 512, NULL, infoLog);
+        std::cout << "SHADER PROGRAM LINKING ERROR\n" << infoLog << "\n";
+    }
+    
+    glDeleteShader(vertexShader);
+    glDeleteShader(fragmentShader);
+    return program;
+}
 
 // ======================================================================
 // SKY, SUN, MOON, AND STARS
@@ -76,25 +110,28 @@ uniform vec3 skyBottom;
 void main(){ vec3 color = mix(skyBottom, skyTop, TexCoord.y); FragColor = vec4(color, 1.0); }
 )V0G0N";
 
-// --- Sun/Moon Data ---
+// --- Sun/Moon Data (CORRECTED SHADERS) ---
 const char* sunMoonVertexShaderSource = R"V0G0N(
 #version 330 core
 layout(location = 0) in vec2 aPos;
+out vec2 TexCoord; // Pass TexCoord to fragment shader
 uniform mat4 model;
 uniform mat4 view;
 uniform mat4 projection;
-void main(){ gl_Position = projection * view * model * vec4(aPos, 0.0, 1.0); }
+void main(){ TexCoord = aPos * 0.5 + 0.5; gl_Position = projection * view * model * vec4(aPos, 0.0, 1.0); }
 )V0G0N";
 const char* sunMoonFragmentShaderSource = R"V0G0N(
 #version 330 core
-in vec2 TexCoord;
+in vec2 TexCoord; // Receive TexCoord from vertex shader
 out vec4 FragColor;
 uniform vec3 color;
 uniform float brightness;
 void main(){
-    float d = distance(gl_PointCoord, vec2(0.5));
-    if(d > 0.5) discard;
-    FragColor = vec4(color * brightness, brightness);
+    float d = distance(TexCoord, vec2(0.5));
+    float diskAlpha = smoothstep(0.5, 0.45, d);
+    float glowAlpha = 1.0 - smoothstep(0.45, 0.5, d);
+    float finalAlpha = clamp(diskAlpha + 0.3 * glowAlpha, 0.0, 1.0);
+    FragColor = vec4(color * brightness, finalAlpha * brightness);
 }
 )V0G0N";
 
@@ -227,14 +264,21 @@ uniform vec3 lightDir;
 uniform vec3 ambientLight;
 uniform vec3 diffuseLight;
 uniform float time;
+uniform float blockGridSize; 
+
 float generateNoise(vec2 cell) { return fract(sin(dot(cell, vec2(12.9898, 78.233))) * 43758.5453); }
 void main(){
     if(blockType == 19){ FragColor = vec4(ourColor, 0.1); return; }
-    float gridSize = 12.0;
+    
     float lineWidth = 0.03;
-    float leafNoiseSize = 12.0;
-    if(blockType == 3 || blockType == 7 || blockType == 9 || blockType == 17){
-        vec2 f = fract(TexCoord * gridSize);
+    
+    // --- THE FIX IS HERE ---
+    // We now use the 'blockGridSize' uniform for ALL block types, including leaves.
+    if(blockType == 3 || blockType == 7 || blockType == 9 || blockType == 17){ // Leaf blocks
+        float leafNoiseSize = 12.0; // The noise pattern can remain finer
+        vec2 f = fract(TexCoord * blockGridSize); // Use the uniform for the grid
+        // --- END OF FIX ---
+        
         bool isGridLine = (f.x < lineWidth || f.y < lineWidth);
         vec2 blockCoord = floor(WorldPos.xy);
         vec2 seed = fract(blockCoord * 0.12345);
@@ -251,7 +295,8 @@ void main(){
         FragColor = vec4(finalColor, finalAlpha);
         return;
     }
-    if(blockType == 1){
+    
+    if(blockType == 1){ // Water blocks
         vec3 waterColor = blockColors[1];
         float wave1 = sin(WorldPos.x * 0.1 + time * 2.0);
         float wave2 = cos(WorldPos.z * 0.1 + time * 2.0);
@@ -262,8 +307,8 @@ void main(){
         vec3 lighting = ambientLight + diffuseLight * diff;
         vec3 finalColor = waterColor * lighting;
         FragColor = vec4(finalColor, 0.3);
-    } else {
-        vec2 f = fract(TexCoord * gridSize);
+    } else { // All other solid blocks
+        vec2 f = fract(TexCoord * blockGridSize);
         vec3 baseColor;
         if(f.x < lineWidth || f.y < lineWidth)
             baseColor = vec3(0.0, 0.0, 0.0);
@@ -281,7 +326,6 @@ void main(){
     }
 }
 )";
-
 // --- Cube Vertex Data (Unchanged) ---
 float cubeVertices[] = {
    -0.5f, -0.5f,  0.5f, 0,0,1, 0.0f, 0.0f, 0.5f, -0.5f,  0.5f, 0,0,1, 1.0f, 0.0f, 0.5f,  0.5f,  0.5f, 0,0,1, 1.0f, 1.0f, 0.5f,  0.5f,  0.5f, 0,0,1, 1.0f, 1.0f, -0.5f,  0.5f,  0.5f, 0,0,1, 0.0f, 1.0f, -0.5f, -0.5f,  0.5f, 0,0,1, 0.0f, 0.0f,
@@ -294,18 +338,18 @@ float cubeVertices[] = {
 
 // --- Block Instance Data ---
 std::vector<std::vector<glm::vec3>> blockInstances(NUM_BLOCK_TYPES);
-std::vector<std::vector<glm::vec4>> branchInstances(1); // Only one type of branch for now
+std::vector<std::vector<glm::vec4>> branchInstances(1);
 
 void createDebugWorld() {
-    int grid_size = 5; // Creates a 5x5 grid for the 25 block types
+    int grid_size = 5;
     float spacing = 3.0f;
     for (int i = 0; i < NUM_BLOCK_TYPES; ++i) {
         int x = i % grid_size;
         int z = i / grid_size;
         glm::vec3 position(x * spacing, 0.0f, z * spacing);
         
-        if (i == 14) { // Special branch block
-            branchInstances[0].push_back(glm::vec4(position, 0.0f)); // rotation = 0
+        if (i == 14) {
+            branchInstances[0].push_back(glm::vec4(position, 0.0f));
         } else {
             blockInstances[i].push_back(position);
         }
@@ -315,7 +359,6 @@ void createDebugWorld() {
 // ======================================================================
 // MAIN APPLICATION
 // ======================================================================
-
 int main() {
     // --- GLFW & GLAD Initialization ---
     if (!glfwInit()) { std::cout << "Failed to initialize GLFW\n"; return -1; }
@@ -362,7 +405,7 @@ int main() {
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
         glEnableVertexAttribArray(2);
 
-        if (i == 14) { // Branch block uses vec4 instance data
+        if (i == 14) {
             glBindBuffer(GL_ARRAY_BUFFER, branchInstanceVBO);
             glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec4), (void*)0);
             glEnableVertexAttribArray(3);
@@ -370,7 +413,7 @@ int main() {
             glVertexAttribPointer(4, 1, GL_FLOAT, GL_FALSE, sizeof(glm::vec4), (void*)(sizeof(glm::vec3)));
             glEnableVertexAttribArray(4);
             glVertexAttribDivisor(4, 1);
-        } else { // All other blocks use vec3 instance data
+        } else {
             glBindBuffer(GL_ARRAY_BUFFER, instanceVBO);
             glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), (void*)0);
             glEnableVertexAttribArray(3);
@@ -406,13 +449,12 @@ int main() {
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), (void*)0);
     glEnableVertexAttribArray(0);
 
-    // --- Create the Debug World ---
     createDebugWorld();
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glEnable(GL_PROGRAM_POINT_SIZE); // For stars
+    glEnable(GL_PROGRAM_POINT_SIZE);
 
     // --- Main Render Loop ---
     while (!glfwWindowShouldClose(window)) {
@@ -425,7 +467,6 @@ int main() {
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // --- Camera and View Matrices ---
         glm::vec3 front;
         front.x = cos(glm::radians(cameraYaw)) * cos(glm::radians(pitch));
         front.y = sin(glm::radians(pitch));
@@ -434,7 +475,6 @@ int main() {
         glm::mat4 view = glm::lookAt(cameraPos, cameraPos + front, glm::vec3(0.0f, 1.0f, 0.0f));
         glm::mat4 projection = glm::perspective(glm::radians(103.0f), (float)WINDOW_WIDTH / (float)WINDOW_HEIGHT, 0.1f, 2000.0f);
 
-        // --- Time and Sky Logic ---
         time_t currentTimeT = time(0);
         tm localTimeInfo;
         #ifdef _WIN32
@@ -446,7 +486,6 @@ int main() {
         glm::vec3 skyTop, skyBottom;
         getCurrentSkyColors(dayFraction, skyTop, skyBottom);
         
-        // --- Draw Skybox ---
         glDepthMask(GL_FALSE);
         glUseProgram(skyboxShaderProgram);
         glUniform3fv(glGetUniformLocation(skyboxShaderProgram, "skyTop"), 1, glm::value_ptr(skyTop));
@@ -454,7 +493,6 @@ int main() {
         glBindVertexArray(skyboxVAO);
         glDrawArrays(GL_TRIANGLES, 0, 6);
         
-        // --- Draw Stars ---
         glUseProgram(starShaderProgram);
         glUniform1f(glGetUniformLocation(starShaderProgram, "time"), currentFrame);
         glm::mat4 viewNoTranslation = glm::mat4(glm::mat3(view));
@@ -462,6 +500,42 @@ int main() {
         glUniformMatrix4fv(glGetUniformLocation(starShaderProgram, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
         glBindVertexArray(starVAO);
         glDrawArrays(GL_POINTS, 0, starPositions.size());
+        
+        float hour = dayFraction * 24.0f;
+        glm::vec3 sunDir, moonDir;
+        float sunBrightness = 0.0f, moonBrightness = 0.0f;
+        if (hour >= 6.0f && hour < 18.0f) {
+            float u = (hour - 6.0f) / 12.0f;
+            sunDir = glm::normalize(glm::vec3(0.0f, sin(u * 3.14159f), -cos(u * 3.14159f)));
+            sunBrightness = sin(u * 3.14159f);
+        } else {
+            float adjustedHour = (hour < 6.0f) ? hour + 24.0f : hour;
+            float u = (adjustedHour - 18.0f) / 12.0f;
+            moonDir = glm::normalize(glm::vec3(0.0f, sin(u * 3.14159f), -cos(u * 3.14159f)));
+            moonBrightness = sin(u * 3.14159f);
+        }
+        
+        glUseProgram(sunMoonShaderProgram);
+        glUniformMatrix4fv(glGetUniformLocation(sunMoonShaderProgram, "view"), 1, GL_FALSE, glm::value_ptr(view));
+        glUniformMatrix4fv(glGetUniformLocation(sunMoonShaderProgram, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
+        if (sunBrightness > 0.01f) {
+            glm::mat4 model = glm::translate(glm::mat4(1.0f), cameraPos + sunDir * 500.0f);
+            model = glm::scale(model, glm::vec3(50.0f));
+            glUniformMatrix4fv(glGetUniformLocation(sunMoonShaderProgram, "model"), 1, GL_FALSE, glm::value_ptr(model));
+            glUniform3f(glGetUniformLocation(sunMoonShaderProgram, "color"), 1.0f, 1.0f, 0.8f);
+            glUniform1f(glGetUniformLocation(sunMoonShaderProgram, "brightness"), sunBrightness);
+            glBindVertexArray(sunMoonVAO);
+            glDrawArrays(GL_TRIANGLES, 0, 6);
+        }
+        if (moonBrightness > 0.01f) {
+            glm::mat4 model = glm::translate(glm::mat4(1.0f), cameraPos + moonDir * 500.0f);
+            model = glm::scale(model, glm::vec3(40.0f));
+            glUniformMatrix4fv(glGetUniformLocation(sunMoonShaderProgram, "model"), 1, GL_FALSE, glm::value_ptr(model));
+            glUniform3f(glGetUniformLocation(sunMoonShaderProgram, "color"), 0.9f, 0.9f, 1.0f);
+            glUniform1f(glGetUniformLocation(sunMoonShaderProgram, "brightness"), moonBrightness);
+            glBindVertexArray(sunMoonVAO);
+            glDrawArrays(GL_TRIANGLES, 0, 6);
+        }
         glDepthMask(GL_TRUE);
 
         // --- Draw Blocks ---
@@ -470,6 +544,11 @@ int main() {
         glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
         glUniform3fv(glGetUniformLocation(shaderProgram, "cameraPos"), 1, glm::value_ptr(cameraPos));
         glUniform1f(glGetUniformLocation(shaderProgram, "time"), currentFrame);
+        
+        glm::vec3 lightDirVec = sunBrightness > 0.0f ? sunDir : moonDir;
+        glUniform3fv(glGetUniformLocation(shaderProgram, "lightDir"), 1, glm::value_ptr(lightDirVec));
+        glUniform3fv(glGetUniformLocation(shaderProgram, "ambientLight"), 1, glm::value_ptr(glm::vec3(0.4f)));
+        glUniform3fv(glGetUniformLocation(shaderProgram, "diffuseLight"), 1, glm::value_ptr(glm::vec3(0.6f)));
         
         glm::vec3 blockColors[NUM_BLOCK_TYPES];
         blockColors[0] = glm::vec3(0.19f, 0.66f, 0.32f); blockColors[1] = glm::vec3(0.0f, 0.5f, 1.0f);
@@ -481,7 +560,7 @@ int main() {
         blockColors[12] = glm::vec3(0.52f, 0.54f, 0.35f); blockColors[13] = glm::vec3(0.6f, 0.61f, 0.35f);
         blockColors[14] = glm::vec3(0.4f, 0.3f, 0.2f); blockColors[15] = glm::vec3(0.43f, 0.39f, 0.34f);
         blockColors[16] = glm::vec3(0.4f, 0.25f, 0.1f); blockColors[17] = glm::vec3(0.2f, 0.5f, 0.2f);
-        blockColors[18] = glm::vec3(0.3f, 0.2f, 0.1f); blockColors[19] = glm::vec3(1.0f, 1.0f, 1.0f);
+        blockColors[18] = glm::vec3(0.3f, 0.2f, 0.1f); blockColors[19] = glm::vec3(0.2f, 0.8f, 0.9f);
         blockColors[20] = glm::vec3(0.5f, 0.5f, 0.5f); blockColors[21] = glm::vec3(1.0f, 0.5f, 0.0f);
         blockColors[22] = glm::vec3(0.93f, 0.79f, 0.69f); blockColors[23] = glm::vec3(0.95f, 0.95f, 1.0f);
         blockColors[24] = glm::vec3(0.8f, 0.9f, 1.0f);
@@ -491,7 +570,12 @@ int main() {
         glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "model"), 1, GL_FALSE, glm::value_ptr(model));
 
         for (int i = 0; i < NUM_BLOCK_TYPES; ++i) {
-            if (i == 14) { // Branch block
+            // --- THE DEFINITIVE FIX IS HERE ---
+            // All blocks, including leaves, will now use the 24.0f grid size.
+            glUniform1f(glGetUniformLocation(shaderProgram, "blockGridSize"), 24.0f);
+            // --- END OF FIX ---
+
+            if (i == 14) {
                 if (!branchInstances[0].empty()) {
                     glUniform1i(glGetUniformLocation(shaderProgram, "blockType"), i);
                     glBindVertexArray(blockVAOs[i]);
@@ -499,7 +583,7 @@ int main() {
                     glBufferData(GL_ARRAY_BUFFER, branchInstances[0].size() * sizeof(glm::vec4), branchInstances[0].data(), GL_DYNAMIC_DRAW);
                     glDrawArraysInstanced(GL_TRIANGLES, 0, 36, branchInstances[0].size());
                 }
-            } else { // All other blocks
+            } else {
                 if (!blockInstances[i].empty()) {
                     glUniform1i(glGetUniformLocation(shaderProgram, "blockType"), i);
                     glBindVertexArray(blockVAOs[i]);
@@ -530,22 +614,18 @@ void processInput(GLFWwindow* window) {
         glfwSetWindowShouldClose(window, true);
 
     float cameraSpeed = 5.0f * deltaTime;
-    glm::vec3 front = glm::vec3(cos(glm::radians(cameraYaw)) * cos(glm::radians(pitch)), sin(glm::radians(pitch)), sin(glm::radians(cameraYaw)) * cos(glm::radians(pitch)));
+    glm::vec3 front = glm::vec3(cos(glm::radians(cameraYaw)), 0.0f, sin(glm::radians(cameraYaw)));
     front = glm::normalize(front);
     glm::vec3 right = glm::normalize(glm::cross(front, glm::vec3(0.0f, 1.0f, 0.0f)));
     
-    glm::vec3 moveDir(0.0f);
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        moveDir += glm::vec3(front.x, 0.0f, front.z);
+        cameraPos += front * cameraSpeed;
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        moveDir -= glm::vec3(front.x, 0.0f, front.z);
+        cameraPos -= front * cameraSpeed;
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        moveDir -= right;
+        cameraPos -= right * cameraSpeed;
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        moveDir += right;
-    
-    if (glm::length(moveDir) > 0.0f)
-        cameraPos += glm::normalize(moveDir) * cameraSpeed;
+        cameraPos += right * cameraSpeed;
 
     if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
         cameraPos.y += cameraSpeed;
@@ -571,31 +651,4 @@ void mouse_callback(GLFWwindow* window, double xposIn, double yposIn) {
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
-}
-
-GLuint compileShaderProgram(const char* vShaderSrc, const char* fShaderSrc) {
-    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, &vShaderSrc, NULL);
-    glCompileShader(vertexShader);
-    int success;
-    char infoLog[512];
-    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-    if (!success) { glGetShaderInfoLog(vertexShader, 512, NULL, infoLog); std::cout << "VERTEX SHADER ERROR\n" << infoLog << "\n"; }
-    
-    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &fShaderSrc, NULL);
-    glCompileShader(fragmentShader);
-    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-    if (!success) { glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog); std::cout << "FRAGMENT SHADER ERROR\n" << infoLog << "\n"; }
-    
-    GLuint program = glCreateProgram();
-    glAttachShader(program, vertexShader);
-    glAttachShader(program, fragmentShader);
-    glLinkProgram(program);
-    glGetProgramiv(program, GL_LINK_STATUS, &success);
-    if (!success) { glGetProgramInfoLog(program, 512, NULL, infoLog); std::cout << "SHADER PROGRAM LINKING ERROR\n" << infoLog << "\n"; }
-    
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
-    return program;
 }
