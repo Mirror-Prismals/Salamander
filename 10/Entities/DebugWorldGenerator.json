@@ -1,0 +1,9 @@
+{
+  "name": "DebugWorldGenerator",
+  "isRenderable": false,
+  "blockType": -1,
+  "isWorld": false,
+  "isAudicle": true,
+  "isStar": false,
+  "instances": []
+}
