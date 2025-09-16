@@ -1,0 +1,6 @@
+{
+    "init_steps": [],
+    "update_steps": [
+        "UpdateCameraMatrices"
+    ]
+}

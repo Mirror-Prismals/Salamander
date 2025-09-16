@@ -1,0 +1,9 @@
+{
+  "name": "World",
+  "isRenderable": false,
+  "blockType": -1,
+  "isWorld": true,
+  "isAudicle": false,
+  "isStar": false,
+  "instances": []
+}
