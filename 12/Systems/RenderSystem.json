@@ -1,0 +1,8 @@
+{
+    "init_steps": [
+        "InitializeRenderer"
+    ],
+    "update_steps": [
+        "RenderScene"
+    ]
+}
