@@ -1,0 +1,10 @@
+{
+  "systems_order": [
+    "AudioSystem.json",
+    "PlayerControlSystem.json",
+    "CameraSystem.json",
+    "PinkNoiseSystem.json",
+    "AudicleSystem.json",
+    "RenderSystem.json"
+  ]
+}
