@@ -1,0 +1,9 @@
+{
+  "Program": "Installed",
+  "AudioSystem": true,
+  "PinkNoiseSystem": true,
+  "PlayerControlSystem": true,
+  "CameraSystem": true,
+  "AudicleSystem": true,
+  "RenderSystem": true
+}
