@@ -1,0 +1,13 @@
+{
+    "init_steps": {
+        "InitializeAudio": {
+            "dependencies": ["AudioContext"]
+        }
+    },
+    "update_steps": {},
+    "cleanup_steps": {
+        "CleanupAudio": {
+            "dependencies": ["AudioContext"]
+        }
+    }
+}
