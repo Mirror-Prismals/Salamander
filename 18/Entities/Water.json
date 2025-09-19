@@ -1,0 +1,7 @@
+{
+  "name": "Water",
+  "isBlock": true,
+  "isSolid": false,
+  "isAnimated": true,
+  "hasWireframe": false
+}
