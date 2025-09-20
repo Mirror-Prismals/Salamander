@@ -1,0 +1,21 @@
+{
+  "colors": {
+    "Default": "#FFFFFF",
+    "Grass": "#31A852",
+    "Water": "#0080FF",
+    "Stone": "#4A3621",
+    "Wood": "#663300",
+    "Leaf": "#228B22",
+    "Sand": "#F4A460",
+    "DebugRed": "#FF0000",
+    "DebugBlue": "#0000FF",
+    "PulsingGrid": "#5C9E5E",
+    "TransparentWave": "#33CCFF",
+    "DeepWater": "#0D548D",
+    "Soil": "#593D28",
+    "Granite": "#888888",
+    "Gold": "#FFD700",
+    "Magenta": "#FF00FF",
+    "White": "#FFFFFF"
+  }
+}

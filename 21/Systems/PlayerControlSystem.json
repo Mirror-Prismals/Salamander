@@ -1,0 +1,14 @@
+{
+    "init_steps": {},
+    "update_steps": {
+        "ProcessInputEvents": {
+            "dependencies": ["PlayerContext", "TesseractContext"]
+        },
+        "UpdateCameraRotationFromMouse": {
+            "dependencies": ["PlayerContext"]
+        },
+        "ProcessPlayerMovement": {
+            "dependencies": ["PlayerContext"]
+        }
+    }
+}
