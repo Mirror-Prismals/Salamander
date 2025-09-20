@@ -1,0 +1,7 @@
+{
+  "name": "WireframeBlock",
+  "isBlock": true,
+  "isSolid": true,
+  "isAnimated": true,
+  "hasWireframe": true
+}

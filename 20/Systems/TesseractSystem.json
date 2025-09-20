@@ -1,0 +1,20 @@
+{
+    "init_steps": {
+        "InitializeTesseract": {
+            "dependencies": ["TesseractContext", "WorldContext"]
+        }
+    },
+    "update_steps": {
+        "UpdateTesseract": {
+            "dependencies": ["TesseractContext"]
+        },
+        "RenderTesseract": {
+            "dependencies": ["TesseractContext", "PlayerContext"]
+        }
+    },
+    "cleanup_steps": {
+        "CleanupTesseract": {
+            "dependencies": ["TesseractContext"]
+        }
+    }
+}

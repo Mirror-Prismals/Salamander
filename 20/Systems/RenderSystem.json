@@ -1,0 +1,12 @@
+{
+    "init_steps": {
+        "InitializeRenderer": {
+            "dependencies": ["RendererContext", "WorldContext"]
+        }
+    },
+    "update_steps": {
+        "RenderScene": {
+            "dependencies": ["RendererContext", "PlayerContext", "WorldContext"]
+        }
+    }
+}
