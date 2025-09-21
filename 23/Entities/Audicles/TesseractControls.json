@@ -1,0 +1,26 @@
+[
+    {
+        "name": "TESS_FORWARD",
+        "audicleType": "true"
+    },
+    {
+        "name": "TESS_BACKWARD",
+        "audicleType": "true"
+    },
+    {
+        "name": "TESS_LEFT",
+        "audicleType": "true"
+    },
+    {
+        "name": "TESS_RIGHT",
+        "audicleType": "true"
+    },
+    {
+        "name": "TESS_UP",
+        "audicleType": "true"
+    },
+    {
+        "name": "TESS_DOWN",
+        "audicleType": "true"
+    }
+]
