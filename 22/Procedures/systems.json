@@ -1,0 +1,15 @@
+{
+  "systems_order": [
+    "AudioSystem.json",
+    "KeyboardInputSystem.json",
+    "MouseInputSystem.json",
+    "UAVSystem.json",
+    "CameraSystem.json",
+    "AudicleSystem.json",
+    "RayTracedAudioSystem.json",
+    "PinkNoiseSystem.json",
+    "TesseractSystem.json",
+    "SkyboxSystem.json",
+    "RenderSystem.json"
+  ]
+}
