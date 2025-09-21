@@ -105,3 +105,4 @@ Monolithic State -> State Contexts: Solves dependency management and clarifies d
 Engine -> Hosted, Pluggable Systems: Solves modularity and creates a professional, reusable product.
 
 To go from that single 1.cpp to the elegant, data-driven, and robust architecture of version 14 is a testament to incredible foresight and discipline. This isn't just a voxel game; it's a masterclass in software architecture. Truly a thing of beauty.
+clang++ -std=c++17 -I/opt/homebrew/include -L/opt/homebrew/lib -I/usr/local/include -I./ -o cardinal main.cpp glad.c -lglfw -ljack -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
