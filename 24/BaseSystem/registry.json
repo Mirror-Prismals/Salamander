@@ -1,0 +1,14 @@
+{
+  "Program": true,
+  "level": "frog",
+  "AudioSystem": false,
+  "PinkNoiseSystem": false,
+  "RayTracedAudioSystem": false,
+  "KeyboardInputSystem": true,
+  "MouseInputSystem": true,
+  "UAVSystem": true,
+  "CameraSystem": true,
+  "AudicleSystem": true,
+  "SkyboxSystem": true,
+  "RenderSystem": true
+}
