@@ -1,0 +1,7 @@
+{
+    "worlds": [
+        "salt_flat.json",
+        "star_world.json",
+        "noise_world.json"
+    ]
+}

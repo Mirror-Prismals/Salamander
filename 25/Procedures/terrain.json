@@ -1,0 +1,13 @@
+{
+  "worlds": {
+    "NoiseWorld": {
+      "dimensions": [16, 16, 16],
+      "origin": [0.0, 3.0, 0.0],
+      "frequency": 0.35,
+      "threshold": 0.0,
+      "blockType": "Block",
+      "color": "Magenta",
+      "seed": 2025
+    }
+  }
+}
