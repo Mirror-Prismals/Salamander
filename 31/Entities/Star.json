@@ -1,0 +1,9 @@
+{
+  "name": "Star",
+  "isRenderable": false,
+  "blockType": -1,
+  "isWorld": false,
+  "isAudicle": false,
+  "isStar": true,
+  "instances": []
+}
