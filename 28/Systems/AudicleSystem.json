@@ -1,0 +1,8 @@
+{
+    "init_steps": {},
+    "update_steps": {
+        "ProcessAudicles": {
+            "dependencies": ["InstanceContext"]
+        }
+    }
+}
