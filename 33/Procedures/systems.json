@@ -1,0 +1,21 @@
+{
+  "systems_order": [
+    "AudioSystem.json",
+    "KeyboardInputSystem.json",
+    "MouseInputSystem.json",
+    "UAVSystem.json",
+    "CameraSystem.json",
+    "AudicleSystem.json",
+    "RayTracedAudioSystem.json",
+    "PinkNoiseSystem.json",
+    "SkyboxSystem.json",
+    "TerrainGenerationSystem.json",
+    "StructurePlacementSystem.json",
+    "StructureCaptureSystem.json",
+    "BlockSelectionSystem.json",
+    "BlockChargeSystem.json",
+    "BuildSystem.json",
+    "HUDSystem.json",
+    "RenderSystem.json"
+  ]
+}
