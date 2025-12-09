@@ -1,0 +1,10 @@
+{
+    "worlds": [
+        "salt_flat.json",
+        "star_world.json",
+        "noise_world.json",
+        "island_world.json",
+        "island_audio_visualizer_world.json",
+        "stamp_test_world.json"
+    ]
+}
