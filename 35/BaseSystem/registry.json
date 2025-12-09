@@ -1,0 +1,21 @@
+{
+  "Program": true,
+  "level": "frog",
+  "AudioSystem": true,
+  "PinkNoiseSystem": true,
+  "RayTracedAudioSystem": true,
+  "KeyboardInputSystem": true,
+  "MouseInputSystem": true,
+  "UAVSystem": true,
+  "CameraSystem": true,
+  "AudicleSystem": true,
+  "SkyboxSystem": true,
+  "StructureCaptureSystem": true,
+  "BlockSelectionSystem": true,
+  "BlockChargeSystem": true,
+  "BuildSystem": false,
+  "HUDSystem": true,
+  "TerrainGenerationSystem": true,
+  "StructurePlacementSystem": true,
+  "RenderSystem": true
+}
