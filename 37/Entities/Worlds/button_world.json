@@ -1,0 +1,14 @@
+{
+  "name": "UIButtonWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "Button",
+      "position": [960.0, 540.0, 0.0],
+      "color": [0.3, 0.3, 0.3],
+      "size": [75.0, 75.0, 15.0]
+    }
+  ]
+}
