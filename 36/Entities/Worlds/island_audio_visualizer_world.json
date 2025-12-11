@@ -1,0 +1,17 @@
+{
+  "name": "IslandAudioVisualizerWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "AudioVisualizer",
+      "position": [0.0, 80.0, 0.0]
+    },
+    {
+      "prototypeID": -1,
+      "name": "Computer",
+      "position": [2.5, 82.0, 0.0]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "UAV_W",
+        "audicleType": "gated"
+    },
+    {
+        "name": "UAV_A",
+        "audicleType": "gated"
+    },
+    {
+        "name": "UAV_S",
+        "audicleType": "gated"
+    },
+    {
+        "name": "UAV_D",
+        "audicleType": "gated"
+    },
+    {
+        "name": "UAV_SPACE",
+        "audicleType": "gated"
+    },
+    {
+        "name": "UAV_LSHIFT",
+        "audicleType": "gated"
+    }
+]
