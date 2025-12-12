@@ -1,0 +1,11 @@
+{
+    "init_steps": {
+        "GenerateTerrain": {
+            "dependencies": [
+                "LevelContext",
+                "InstanceContext",
+                "WorldContext"
+            ]
+        }
+    }
+}

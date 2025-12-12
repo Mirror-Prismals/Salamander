@@ -1,0 +1,8 @@
+{
+  "name": "ScaffoldBlock",
+  "isBlock": true,
+  "isOccluder": true,
+  "isMutable": false,
+  "dampingFactor": 1.0,
+  "color": "Scaffold"
+}
