@@ -71,7 +71,7 @@ namespace RayTracedAudioSystemLogic {
             float distanceTraveled = 0.0f;
             int maxSteps = 256;
             bool encounteredOcc = false;
-            glm::ivec3 sourceCell = glm::ivec3(glm::round(start));
+            glm::ivec3 sourceCell = glm::ivec3(glm::round(end));
 
             while (distanceTraveled < rayLen && maxSteps > 0) {
                 float lastDistanceTraveled = distanceTraveled;
