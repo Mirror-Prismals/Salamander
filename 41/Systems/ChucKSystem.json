@@ -1,0 +1,7 @@
+{
+    "init_steps": {
+        "CompileDefaultChucKScript": {
+            "dependencies": ["AudioContext"]
+        }
+    }
+}
