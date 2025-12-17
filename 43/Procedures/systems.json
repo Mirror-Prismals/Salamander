@@ -1,0 +1,27 @@
+{
+  "systems_order": [
+    "AudioSystem.json",
+    "ChucKSystem.json",
+    "KeyboardInputSystem.json",
+    "MouseInputSystem.json",
+    "UAVSystem.json",
+    "CameraSystem.json",
+    "AudicleSystem.json",
+    "RayTracedAudioSystem.json",
+    "PinkNoiseSystem.json",
+    "AudioRayVisualizerSystem.json",
+    "SkyboxSystem.json",
+    "TerrainGenerationSystem.json",
+    "StructurePlacementSystem.json",
+    "StructureCaptureSystem.json",
+    "BlockSelectionSystem.json",
+    "BlockChargeSystem.json",
+    "BuildSystem.json",
+    "HUDSystem.json",
+    "RenderSystem.json",
+    "UIScreenSystem.json",
+    "ButtonSystem.json",
+    "GlyphSystem.json",
+    "ComputerCursorSystem.json"
+  ]
+}
