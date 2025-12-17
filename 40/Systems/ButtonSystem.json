@@ -1,0 +1,12 @@
+{
+    "update_steps": {
+        "UpdateButtons": {
+            "dependencies": [
+                "UIContext",
+                "LevelContext",
+                "RendererContext",
+                "WorldContext"
+            ]
+        }
+    }
+}
