@@ -1,0 +1,142 @@
+{
+  "bounds": {
+    "min": [
+      -8,
+      0,
+      -8
+    ],
+    "size": [
+      16,
+      16,
+      16
+    ]
+  },
+  "format": "palette_rle_v1",
+  "id": "starter_build",
+  "palette": [
+    {
+      "color": [
+        0.8075202703475952,
+        0.7291999459266663,
+        0.6009613275527954
+      ],
+      "prototype": "Block"
+    }
+  ],
+  "runs": [
+    {
+      "count": 273,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 2,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 2,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 2,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 2,
+      "palette": -1
+    },
+    {
+      "count": 13,
+      "palette": 0
+    },
+    {
+      "count": 3,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 2,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 2,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 2,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 2,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 2,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 2,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 2,
+      "palette": -1
+    },
+    {
+      "count": 14,
+      "palette": 0
+    },
+    {
+      "count": 3617,
+      "palette": -1
+    }
+  ],
+  "size": [
+    16,
+    16,
+    16
+  ],
+  "world": "StructureDevWorld"
+}
