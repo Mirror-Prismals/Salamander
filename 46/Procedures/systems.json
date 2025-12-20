@@ -1,0 +1,32 @@
+{
+  "systems_order": [
+    "SpawnSystem.json",
+    "AudioSystem.json",
+    "ChucKSystem.json",
+    "KeyboardInputSystem.json",
+    "MouseInputSystem.json",
+    "UAVSystem.json",
+    "CollisionSystem.json",
+    "CameraSystem.json",
+    "AudicleSystem.json",
+    "RayTracedAudioSystem.json",
+    "PinkNoiseSystem.json",
+    "AudioRayVisualizerSystem.json",
+    "SkyboxSystem.json",
+    "CloudSystem.json",
+    "AuroraSystem.json",
+    "VolumeFillSystem.json",
+    "TerrainGenerationSystem.json",
+    "StructurePlacementSystem.json",
+    "StructureCaptureSystem.json",
+    "BlockSelectionSystem.json",
+    "BlockChargeSystem.json",
+    "BuildSystem.json",
+    "HUDSystem.json",
+    "RenderSystem.json",
+    "UIScreenSystem.json",
+    "ButtonSystem.json",
+    "GlyphSystem.json",
+    "ComputerCursorSystem.json"
+  ]
+}
