@@ -1,0 +1,10 @@
+{
+    "update_steps": {
+        "UpdateBlockCharge": {
+            "dependencies": [
+                "PlayerContext",
+                "LevelContext"
+            ]
+        }
+    }
+}
