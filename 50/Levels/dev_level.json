@@ -1,0 +1,8 @@
+{
+  "worlds": [
+    "structure_dev_world.json",
+    "star_world.json",
+    "salt_flat.json",
+    "face_debug_world.json"
+  ]
+}

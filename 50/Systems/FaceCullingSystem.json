@@ -1,0 +1,11 @@
+{
+    "update_steps": {
+        "UpdateFaces": {
+            "dependencies": [
+                "ChunkContext",
+                "FaceContext",
+                "WorldContext"
+            ]
+        }
+    }
+}
