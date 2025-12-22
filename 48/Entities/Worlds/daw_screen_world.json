@@ -1,0 +1,13 @@
+{
+  "name": "DAWScreenWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "Screen",
+      "position": [0.0, 0.0, 0.0],
+      "color": [0.171, 0.171, 0.171]
+    }
+  ]
+}
