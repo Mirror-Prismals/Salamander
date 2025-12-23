@@ -1,0 +1,10 @@
+{
+    "update_steps": {
+        "UpdateBlockSelection": {
+            "dependencies": [
+                "PlayerContext",
+                "LevelContext"
+            ]
+        }
+    }
+}
