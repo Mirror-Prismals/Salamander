@@ -1,0 +1,7 @@
+{
+    "update_steps": {
+        "UpdateAudioRayVisualizer": {
+            "dependencies": ["RendererContext", "WorldContext", "RayTracedAudioContext"]
+        }
+    }
+}

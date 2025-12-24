@@ -1,0 +1,43 @@
+{
+  "name": "UIButtonWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "Button",
+      "position": [517.5, 120.0, 0.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "size": [75.0, 75.0, 15.0]
+    },
+    {
+      "prototypeID": -1,
+      "name": "Button",
+      "position": [697.5, 120.0, 0.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "size": [75.0, 75.0, 15.0]
+    },
+    {
+      "prototypeID": -1,
+      "name": "Button",
+      "position": [877.5, 120.0, 0.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "size": [75.0, 75.0, 15.0]
+    },
+    {
+      "prototypeID": -1,
+      "name": "Button",
+      "position": [1057.5, 120.0, 0.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "size": [75.0, 75.0, 15.0]
+    }
+  ]
+}
