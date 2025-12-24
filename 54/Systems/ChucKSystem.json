@@ -1,0 +1,17 @@
+{
+    "init_steps": {
+        "UpdateChucK": {
+            "dependencies": ["AudioContext"]
+        }
+    },
+    "update_steps": {
+        "UpdateChucK": {
+            "dependencies": ["AudioContext"]
+        }
+    },
+    "cleanup_steps": {
+        "UpdateChucK": {
+            "dependencies": ["AudioContext"]
+        }
+    }
+}

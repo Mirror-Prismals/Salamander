@@ -1,0 +1,11 @@
+{
+    "update_steps": {
+        "UpdateBuildMode": {
+            "dependencies": [
+                "PlayerContext",
+                "LevelContext",
+                "HUDContext"
+            ]
+        }
+    }
+}
