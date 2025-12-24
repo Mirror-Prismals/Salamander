@@ -1,0 +1,380 @@
+#pragma once
+
+// --- Core Includes ---
+#include "glad/glad.h"
+#include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtc/quaternion.hpp>
+#include <vector>
+#include <string>
+#include <map>
+#include <unordered_map>
+#include <unordered_set>
+#include <algorithm>
+#include <memory>
+#include <functional>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <ctime>
+#include <mutex>
+#include <queue>
+#include "json.hpp"
+#include <jack/jack.h>
+#include <jack/ringbuffer.h>
+#include <array>
+#include <variant>
+#include "chuck.h"
+
+// --- Forward Declarations ---
+struct Entity; struct EntityInstance;
+using json = nlohmann::json; using vec4 = glm::vec4;
+
+enum class RenderBehavior { STATIC_DEFAULT, ANIMATED_WATER, ANIMATED_WIREFRAME, STATIC_BRANCH, ANIMATED_TRANSPARENT_WAVE, COUNT };
+struct InstanceData { glm::vec3 position; glm::vec3 color; };
+struct BranchInstanceData { glm::vec3 position; float rotation; glm::vec3 color; };
+class Shader { public: unsigned int ID; Shader(const char* v, const char* f); void use(); void setMat4(const std::string&n,const glm::mat4&m)const; void setVec3(const std::string&n,const glm::vec3&v)const; void setVec2(const std::string&n,const glm::vec2&v)const; void setFloat(const std::string&n,float v)const; void setInt(const std::string&n,int v)const; private: void check(unsigned int s,std::string t); };
+struct SkyColorKey { float time; glm::vec3 top; glm::vec3 bottom; };
+struct FaceTextureSet { int all = -1; int top = -1; int bottom = -1; int side = -1; };
+struct FaceInstanceRenderData { glm::vec3 position; glm::vec3 color; int tileIndex = -1; float alpha = 1.0f; };
+
+// --- CONTEXT STRUCTS ---
+struct LevelContext {
+    int activeWorldIndex = 0;
+    std::vector<Entity> worlds;
+    std::string spawnKey = "frog_spawn";
+};
+struct AppContext { unsigned int windowWidth = 1920; unsigned int windowHeight = 1080; };
+struct WorldContext {
+    std::map<std::string, glm::vec3> colorLibrary;
+    std::vector<SkyColorKey> skyKeys;
+    std::vector<float> cubeVertices;
+    std::map<std::string, std::string> shaders;
+    glm::ivec2 atlasTileSize{24, 24};
+    glm::ivec2 atlasTextureSize{0, 0};
+    int atlasTilesPerRow = 0;
+    int atlasTilesPerCol = 0;
+    std::unordered_map<std::string, FaceTextureSet> atlasMappings;
+    std::vector<FaceTextureSet> prototypeTextureSets;
+};
+struct ChunkKey {
+    int worldIndex = -1;
+    glm::ivec3 chunkIndex{0};
+    bool operator==(const ChunkKey& other) const noexcept {
+        return worldIndex == other.worldIndex && chunkIndex == other.chunkIndex;
+    }
+};
+struct ChunkKeyHash {
+    std::size_t operator()(const ChunkKey& k) const noexcept {
+        std::size_t hw = std::hash<int>()(k.worldIndex);
+        std::size_t hx = std::hash<int>()(k.chunkIndex.x);
+        std::size_t hy = std::hash<int>()(k.chunkIndex.y);
+        std::size_t hz = std::hash<int>()(k.chunkIndex.z);
+        return hw ^ (hx << 1) ^ (hy << 2) ^ (hz << 3);
+    }
+};
+struct ChunkData {
+    std::vector<glm::vec3> positions;
+    std::vector<glm::vec3> colors;
+    std::vector<float> rotations;
+    std::vector<int> prototypeIDs;
+    std::vector<int> worldIndices;
+};
+struct ChunkRenderBuffers {
+    std::array<GLuint, static_cast<int>(RenderBehavior::COUNT)> vaos{};
+    std::array<GLuint, static_cast<int>(RenderBehavior::COUNT)> instanceVBOs{};
+    std::array<int, static_cast<int>(RenderBehavior::COUNT)> counts{};
+    bool builtWithFaceCulling = false;
+};
+struct ChunkContext {
+    glm::ivec3 chunkSize{24, 12, 24};
+    int renderDistanceChunks = 6;
+    int unloadDistanceChunks = 7; // default a bit beyond render distance
+    std::unordered_map<ChunkKey, ChunkData, ChunkKeyHash> chunks;
+    std::unordered_set<ChunkKey, ChunkKeyHash> dirtyChunks;
+    std::unordered_map<ChunkKey, ChunkRenderBuffers, ChunkKeyHash> renderBuffers;
+    std::unordered_set<ChunkKey, ChunkKeyHash> renderBuffersDirty;
+    std::unordered_map<ChunkKey, std::vector<size_t>, ChunkKeyHash> chunkInstanceLUT;
+    bool chunkIndexDirty = true;
+    bool renderBuffersDirtyAll = true;
+    bool renderBuffersFaceState = false;
+    bool initialized = false;
+};
+struct FaceChunkData {
+    std::vector<glm::vec3> positions;
+    std::vector<glm::vec3> colors;
+    std::vector<int> faceTypes;
+    std::vector<int> tileIndices;
+    std::vector<float> alphas;
+};
+struct FaceContext {
+    std::unordered_map<ChunkKey, FaceChunkData, ChunkKeyHash> faces;
+    std::unordered_set<ChunkKey, ChunkKeyHash> dirtyChunks;
+    bool initialized = false;
+};
+struct PlayerContext {
+    float cameraYaw=-90.0f;
+    float cameraPitch=0.0f;
+    glm::vec3 cameraPosition=glm::vec3(0.0f,1.0f,5.0f);
+    glm::vec3 prevCameraPosition=glm::vec3(0.0f,1.0f,5.0f);
+    float mouseOffsetX=0.0f;
+    float mouseOffsetY=0.0f;
+    float lastX=1920/2.0f;
+    float lastY=1080/2.0f;
+    bool firstMouse=true;
+    glm::mat4 viewMatrix;
+    glm::mat4 projectionMatrix;
+    bool rightMouseDown=false;
+    bool leftMouseDown=false;
+    bool rightMousePressed=false;
+    bool leftMousePressed=false;
+    bool rightMouseReleased=false;
+    bool leftMouseReleased=false;
+    glm::ivec3 targetedBlock=glm::ivec3(0);
+    glm::vec3 targetedBlockPosition=glm::vec3(0.0f);
+    glm::vec3 targetedBlockNormal=glm::vec3(0.0f);
+    bool hasBlockTarget=false;
+    int targetedWorldIndex=-1;
+    bool isChargingBlock=false;
+    bool blockChargeReady=false;
+    float blockChargeValue=0.0f;
+    bool buildMode=false;
+    int buildChannel=0;
+    glm::vec3 buildColor=glm::vec3(1.0f);
+    double scrollYOffset=0.0;
+    bool isHoldingBlock=false;
+    int heldPrototypeID=-1;
+    glm::vec3 heldBlockColor=glm::vec3(1.0f, 1.0f, 1.0f);
+    bool onGround=false;
+    float verticalVelocity=0.0f;
+};
+struct InstanceContext { int nextInstanceID = 0; };
+struct RendererContext {
+    std::unique_ptr<Shader> blockShader, skyboxShader, sunMoonShader, starShader, selectionShader, hudShader, crosshairShader;
+    std::unique_ptr<Shader> faceShader;
+    GLuint cubeVBO;
+    std::vector<GLuint> behaviorVAOs;
+    std::vector<GLuint> behaviorInstanceVBOs;
+    GLuint faceVAO = 0;
+    GLuint faceVBO = 0;
+    GLuint faceInstanceVBO = 0;
+    GLuint skyboxVAO, skyboxVBO, sunMoonVAO, sunMoonVBO, starVAO, starVBO;
+    GLuint selectionVAO = 0;
+    GLuint selectionVBO = 0;
+    int selectionVertexCount = 0;
+    GLuint hudVAO = 0;
+    GLuint hudVBO = 0;
+    GLuint crosshairVAO = 0;
+    GLuint crosshairVBO = 0;
+    int crosshairVertexCount = 0;
+    std::unique_ptr<Shader> uiShader;
+    std::unique_ptr<Shader> uiColorShader;
+    GLuint uiVAO = 0;
+    GLuint uiVBO = 0;
+    GLuint uiButtonVAO = 0;
+    GLuint uiButtonVBO = 0;
+    // Audio ray visualization
+    std::unique_ptr<Shader> audioRayShader;
+    GLuint audioRayVAO = 0;
+    GLuint audioRayVBO = 0;
+    int audioRayVertexCount = 0;
+    std::unique_ptr<Shader> audioRayVoxelShader;
+    GLuint audioRayVoxelVAO = 0;
+    GLuint audioRayVoxelInstanceVBO = 0;
+    int audioRayVoxelCount = 0;
+    // Godray resources
+    GLuint godrayQuadVAO = 0;
+    GLuint godrayQuadVBO = 0;
+    GLuint godrayOcclusionFBO = 0;
+    GLuint godrayOcclusionTex = 0;
+    GLuint godrayBlurFBO = 0;
+    GLuint godrayBlurTex = 0;
+    std::unique_ptr<Shader> godrayRadialShader;
+    std::unique_ptr<Shader> godrayCompositeShader;
+    int godrayWidth = 0;
+    int godrayHeight = 0;
+    int godrayDownsample = 2;
+    // Clouds
+    GLuint cloudVAO = 0;
+    GLuint cloudVBO = 0;
+    std::unique_ptr<Shader> cloudShader;
+    // Auroras
+    struct AuroraRibbon {
+        GLuint vao = 0;
+        GLuint vbo = 0;
+        int vertexCount = 0;
+        glm::vec3 pos{0};
+        float yaw = 0.0f;
+        float width = 0.0f;
+        float height = 0.0f;
+        int palette = 0;
+        float bend = 0.0f;
+        float seed = 0.0f;
+    };
+    std::vector<AuroraRibbon> auroras;
+    std::unique_ptr<Shader> auroraShader;
+    GLuint atlasTexture = 0;
+    glm::ivec2 atlasTextureSize{0, 0};
+    glm::ivec2 atlasTileSize{24, 24};
+    int atlasTilesPerRow = 0;
+    int atlasTilesPerCol = 0;
+};
+struct AudioContext {
+    jack_client_t* client = nullptr;
+    std::vector<jack_port_t*> output_ports;
+    std::vector<float> channelGains;
+    jack_ringbuffer_t* ring_buffer = nullptr;
+    float output_gain = 0.8f;
+    std::mutex audio_state_mutex;
+    int active_generators = 0;
+    static const int PINK_NOISE_OCTAVES = 7;
+    std::array<float, PINK_NOISE_OCTAVES> pink_rows{};
+    int pink_counter = 0;
+    float pink_running_sum = 0.0f;
+    // ChucK integration state
+    ChucK* chuck = nullptr;
+    SAMPLE* chuckInput = nullptr;
+    t_CKINT chuckBufferFrames = 0;
+    int chuckInputChannels = 0;
+    int chuckOutputChannels = 12;
+    bool chuckRunning = false;
+    std::vector<SAMPLE> chuckInterleavedBuffer;
+    // ChucK script management
+    std::string chuckMainScript = "Procedures/chuck/main.ck";
+    std::string chuckNoiseScript = "Procedures/chuck/pink.ck";
+    int chuckMainChannel = 1; // channel index for main.ck
+    int chuckNoiseChannel = 0; // channel index for pink.ck
+    bool chuckBypass = false;
+    bool chuckMainCompileRequested = false;
+    bool chuckNoiseShouldRun = false;
+    t_CKUINT chuckMainShredId = 0;
+    t_CKUINT chuckNoiseShredId = 0;
+};
+struct AudioSourceState { bool isOccluded = false; float distanceGain = 1.0f; };
+struct RayDebugSegment { glm::vec3 from; glm::vec3 to; float gain = 1.0f; bool occluded = false; };
+struct RayDebugVoxel { glm::vec3 pos; float gain = 1.0f; bool occluded = false; };
+struct RayTracedAudioContext { std::map<int, AudioSourceState> sourceStates; std::vector<RayDebugSegment> debugRays; std::vector<RayDebugVoxel> debugVoxels; double lastHeatmapTime = -1.0; };
+struct HUDContext {
+    bool showCharge = false;
+    bool chargeReady = false;
+    float chargeValue = 0.0f;
+    bool buildModeActive = false;
+    glm::vec3 buildPreviewColor = glm::vec3(1.0f);
+    int buildChannel = 0;
+    float displayTimer = 0.0f;
+};
+struct UIContext {
+    bool active = false;
+    bool fullscreenActive = false;
+    glm::vec3 fullscreenColor = glm::vec3(0.0f);
+    int activeWorldIndex = -1;
+    int activeInstanceID = -1;
+    bool cursorReleased = false;
+    double cursorX = 0.0;
+    double cursorY = 0.0;
+    double cursorNDCX = 0.0;
+    double cursorNDCY = 0.0;
+    bool uiLeftDown = false;
+    bool uiLeftPressed = false;
+    bool uiLeftReleased = false;
+    bool consumeClick = false;
+    bool bootLoadingStarted = false;
+    bool loadingActive = false;
+    float loadingTimer = 0.0f;
+    float loadingDuration = 0.0f;
+    bool levelSwitchPending = false;
+    std::string levelSwitchTarget;
+    int actionDelayFrames = 0;
+    std::string pendingActionType;
+    std::string pendingActionKey;
+    std::string pendingActionValue;
+};
+
+struct BaseSystem {
+    std::unique_ptr<LevelContext> level;
+    std::unique_ptr<AppContext> app;
+    std::unique_ptr<WorldContext> world;
+    std::unique_ptr<ChunkContext> chunk;
+    std::unique_ptr<FaceContext> face;
+    std::unique_ptr<PlayerContext> player;
+    std::unique_ptr<InstanceContext> instance;
+    std::unique_ptr<RendererContext> renderer;
+    std::unique_ptr<AudioContext> audio;
+    std::unique_ptr<RayTracedAudioContext> rayTracedAudio;
+    std::unique_ptr<HUDContext> hud;
+    std::unique_ptr<UIContext> ui;
+    std::string gamemode = "creative";
+    std::map<std::string, std::variant<bool, std::string>>* registry = nullptr;
+    bool* reloadRequested = nullptr;
+    std::string* reloadTarget = nullptr;
+};
+using SystemFunction = std::function<void(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*)>;
+
+// --- SYSTEM FUNCTION DECLARATIONS ---
+namespace HostLogic { void LoadProcedureAssets(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); EntityInstance CreateInstance(BaseSystem&, const std::vector<Entity>&, const std::string&, glm::vec3, glm::vec3); EntityInstance CreateInstance(BaseSystem&, int, glm::vec3, glm::vec3); glm::vec3 hexToVec3(const std::string& hex); const Entity* findPrototype(const std::string&, const std::vector<Entity>&); }
+namespace RayTracedAudioSystemLogic { void ProcessRayTracedAudio(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace PinkNoiseSystemLogic { void ProcessPinkNoiseAudicle(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace AudioSystemLogic { void InitializeAudio(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); void CleanupAudio(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace AudicleSystemLogic { void ProcessAudicles(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace SpawnSystemLogic { void SetPlayerSpawn(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace CameraSystemLogic { void UpdateCameraMatrices(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace KeyboardInputSystemLogic { void ProcessKeyboardInput(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace MouseInputSystemLogic { void UpdateCameraRotationFromMouse(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace UAVSystemLogic { void ProcessUAVMovement(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace WalkModeSystemLogic { void ProcessWalkMovement(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace GravitySystemLogic { void ApplyGravity(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace CollisionSystemLogic { void ResolveCollisions(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace VolumeFillSystemLogic { void ProcessVolumeFills(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace ChunkSystemLogic { void UpdateChunks(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); void MarkChunkDirty(BaseSystem&, int, const glm::vec3&); }
+namespace FaceCullingSystemLogic { void UpdateFaces(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); void MarkChunkDirty(BaseSystem&, const ChunkKey&); }
+namespace RenderSystemLogic { void InitializeRenderer(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); void RenderScene(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); void CleanupRenderer(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace TerrainSystemLogic { void GenerateTerrain(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace BlockSelectionSystemLogic {
+    void UpdateBlockSelection(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*);
+    bool HasBlockAt(BaseSystem&, const std::vector<Entity>&, int, const glm::vec3&);
+    void AddBlockToCache(BaseSystem&, std::vector<Entity>&, int, const glm::vec3&, int prototypeID);
+    void RemoveBlockFromCache(BaseSystem&, const std::vector<Entity>&, int, const glm::vec3&);
+    void EnsureAllCaches(BaseSystem&, const std::vector<Entity>&);
+    bool SampleBlockDamping(BaseSystem&, const glm::ivec3&, float&);
+}
+namespace StructureCaptureSystemLogic { void ProcessStructureCapture(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); void NotifyBlockChanged(BaseSystem&, int, const glm::vec3&); }
+namespace StructurePlacementSystemLogic { void ProcessStructurePlacement(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace BlockChargeSystemLogic { void UpdateBlockCharge(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace HUDSystemLogic { void UpdateHUD(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace BuildSystemLogic { void UpdateBuildMode(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace UIScreenSystemLogic { void UpdateUIScreen(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace RegistryEditorSystemLogic { void UpdateRegistry(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace BootSequenceSystemLogic { void UpdateBootSequence(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace ComputerCursorSystemLogic { void UpdateComputerCursor(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace ButtonSystemLogic { void UpdateButtons(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace GlyphSystemLogic { void UpdateGlyphs(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace ChucKSystemLogic { void UpdateChucK(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace AudioRayVisualizerSystemLogic { void UpdateAudioRayVisualizer(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+namespace SkyboxSystemLogic { void getCurrentSkyColors(float, const std::vector<SkyColorKey>&, glm::vec3&, glm::vec3&); void RenderSkyAndCelestials(BaseSystem&, const std::vector<Entity>&, const std::vector<glm::vec3>&, float, float, const glm::mat4&, const glm::mat4&, const glm::vec3&, glm::vec3&); }
+namespace CloudSystemLogic { void RenderClouds(BaseSystem&, const glm::vec3& lightDir, float time); }
+namespace AuroraSystemLogic { void RenderAuroras(BaseSystem&, float time, const glm::mat4& view, const glm::mat4& projection); }
+namespace BlockTextureSystemLogic { void LoadBlockTextures(BaseSystem&, std::vector<Entity>&, float, GLFWwindow*); }
+
+class Host {
+private:
+    GLFWwindow* window = nullptr; BaseSystem baseSystem; std::vector<Entity> entityPrototypes; std::map<std::string, std::variant<bool, std::string>> registry;
+    std::map<std::string, SystemFunction> functionRegistry;
+    bool reloadRequested = false;
+    std::string reloadTarget;
+    struct SystemStep { std::string name; std::vector<std::string> dependencies; };
+    std::vector<SystemStep> initFunctions, updateFunctions, cleanupFunctions;
+    float deltaTime = 0.0f, lastFrame = 0.0f;
+    bool rendererInitialized = false;
+    bool audioInitialized = false;
+    void loadRegistry(); void loadSystems(); bool checkDependencies(const std::vector<std::string>& deps);
+    void registerSystemFunctions(); void init(); void mainLoop(); void cleanup();
+    void reloadLevel(const std::string& levelName);
+    void runCleanupSteps();
+    void PopulateWorldsFromLevel();
+public:
+    void run();
+    void processMouseInput(double xpos, double ypos);
+    void processScroll(double xoffset, double yoffset);
+};
