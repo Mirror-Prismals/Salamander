@@ -1,0 +1,33 @@
+{
+  "name": "TexturedBlockWorld",
+  "isWorld": true,
+  "instances": [
+    { "name": "DebugBlockTex", "position": [0.0, 30.0, 0.0] },
+    { "name": "GrassBlockTex", "position": [2.0, 30.0, 0.0] },
+    { "name": "StoneBlockTex", "position": [4.0, 30.0, 0.0] },
+    { "name": "SandBlockTex", "position": [6.0, 30.0, 0.0] },
+    { "name": "BrickBlockTex", "position": [8.0, 30.0, 0.0] },
+    { "name": "CobblestoneBlockTex", "position": [10.0, 30.0, 0.0] },
+
+    { "name": "AmethystOreTex", "position": [0.0, 30.0, 2.0] },
+    { "name": "RubyOreTex", "position": [2.0, 30.0, 2.0] },
+    { "name": "FlouriteOreTex", "position": [4.0, 30.0, 2.0] },
+    { "name": "SilverOreTex", "position": [6.0, 30.0, 2.0] },
+    { "name": "LavaBlockTex", "position": [8.0, 30.0, 2.0] },
+    { "name": "FirLog1Tex", "position": [10.0, 30.0, 2.0] },
+
+    { "name": "FirLog2Tex", "position": [0.0, 30.0, 4.0] },
+    { "name": "SpruceLog1Tex", "position": [2.0, 30.0, 4.0] },
+    { "name": "SpruceLog2Tex", "position": [4.0, 30.0, 4.0] },
+    { "name": "SpruceLog3Tex", "position": [6.0, 30.0, 4.0] },
+    { "name": "SpruceLog4Tex", "position": [8.0, 30.0, 4.0] },
+    { "name": "OakLogTex", "position": [10.0, 30.0, 4.0] },
+
+    { "name": "StainedPlankTex", "position": [0.0, 30.0, 6.0] },
+    { "name": "WoodPlank1Tex", "position": [2.0, 30.0, 6.0] },
+    { "name": "WoodPlank2Tex", "position": [4.0, 30.0, 6.0] },
+    { "name": "WoodPlank3Tex", "position": [6.0, 30.0, 6.0] },
+    { "name": "Cactus1Tex", "position": [8.0, 30.0, 6.0] },
+    { "name": "Cactus2Tex", "position": [10.0, 30.0, 6.0] }
+  ]
+}

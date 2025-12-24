@@ -1,0 +1,9 @@
+{
+    "init_steps": {},
+    "update_steps": {
+        "ProcessPinkNoiseAudicle": {
+            "dependencies": ["AudioContext", "WorldContext"]
+        }
+    },
+    "cleanup_steps": {}
+}

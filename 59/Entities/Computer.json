@@ -1,0 +1,8 @@
+{
+  "name": "Computer",
+  "isBlock": true,
+  "isAudicle": true,
+  "isRenderable": true,
+  "isSolid": true,
+  "dampingFactor": 0.9
+}
