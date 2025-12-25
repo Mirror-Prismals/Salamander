@@ -1,0 +1,8 @@
+{
+    "init_steps": {
+        "LoadProcedureAssets": {
+            "dependencies": ["AppContext", "WorldContext"]
+        }
+    },
+    "update_steps": {}
+}
