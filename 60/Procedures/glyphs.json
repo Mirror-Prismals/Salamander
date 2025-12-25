@@ -1,0 +1,8 @@
+{
+  "glyphs": [
+    { "buttonIndex": 0, "type": "Back",   "color": "GlyphPlay" },
+    { "buttonIndex": 1, "type": "Stop",   "color": "GlyphStop" },
+    { "buttonIndex": 2, "type": "Record", "color": "GlyphRecord" },
+    { "buttonIndex": 3, "type": "Play",   "color": "GlyphPlay" }
+  ]
+}
