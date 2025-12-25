@@ -1,0 +1,32 @@
+{
+  "tileSize": [24, 24],
+  "atlasSize": [168, 96],
+  "tilesPerRow": 7,
+  "tilesPerCol": 4,
+  "blocks": {
+    "DebugBlock": { "all": 0 },
+    "Grass": { "top": 1, "side": 2, "bottom": 0 },
+    "Stone": { "all": 3 },
+    "Sand": { "all": 4 },
+    "Brick": { "all": 5 },
+    "Cobblestone": { "all": 6 },
+    "AmethystOre": { "all": 7 },
+    "RubyOre": { "all": 8 },
+    "FlouriteOre": { "all": 9 },
+    "SilverOre": { "all": 10 },
+    "Lava": { "all": 11 },
+    "FirLog1": { "side": 12, "top": 19, "bottom": 19 },
+    "FirLog2": { "side": 13, "top": 19, "bottom": 19 },
+    "SpruceLog1": { "side": 14, "top": 19, "bottom": 19 },
+    "SpruceLog2": { "side": 15, "top": 19, "bottom": 19 },
+    "SpruceLog3": { "side": 16, "top": 19, "bottom": 19 },
+    "SpruceLog4": { "side": 17, "top": 19, "bottom": 19 },
+    "OakLog": { "side": 18, "top": 19, "bottom": 19 },
+    "StainedPlank": { "all": 20 },
+    "WoodPlank1": { "all": 21 },
+    "WoodPlank2": { "all": 22 },
+    "WoodPlank3": { "all": 23 },
+    "Cactus1": { "side": 24, "bottom": 26, "top": 27 },
+    "Cactus2": { "side": 25, "bottom": 26, "top": 27 }
+  }
+}
