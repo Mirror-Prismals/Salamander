@@ -1,0 +1,9 @@
+{
+  "init_steps": {
+    "LoadExpanseConfig": {
+      "dependencies": [
+        "WorldContext"
+      ]
+    }
+  }
+}
