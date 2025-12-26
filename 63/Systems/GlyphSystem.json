@@ -1,0 +1,12 @@
+{
+  "update_steps": {
+    "UpdateGlyphs": {
+      "dependencies": [
+        "RendererContext",
+        "LevelContext",
+        "UIContext",
+        "WorldContext"
+      ]
+    }
+  }
+}
