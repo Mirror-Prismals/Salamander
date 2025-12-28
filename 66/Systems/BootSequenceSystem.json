@@ -1,0 +1,12 @@
+{
+  "update_steps": {
+    "UpdateBootSequence": {
+      "dependencies": [
+        "UIContext",
+        "LevelContext",
+        "RendererContext",
+        "WorldContext"
+      ]
+    }
+  }
+}

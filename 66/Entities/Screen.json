@@ -1,0 +1,7 @@
+{
+  "name": "Screen",
+  "isRenderable": false,
+  "isAudicle": false,
+  "isWorld": false,
+  "isMutable": false
+}

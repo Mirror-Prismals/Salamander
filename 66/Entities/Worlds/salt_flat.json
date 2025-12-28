@@ -1,0 +1,9 @@
+{
+    "name": "SaltFlat",
+    "isWorld": true,
+    "isVolume": true,
+    "fillOrigin": [-50, -1, -50],
+    "fillDimensions": [101, 1, 101],
+    "fillBlockType": "Block",
+    "fillColor": "White"
+}
