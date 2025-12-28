@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "intervalSeconds": 1.0,
+  "allowlist": [
+    "UpdateDawState",
+    "UpdateButtons",
+    "ProcessPinkNoiseAudicle",
+    "RenderScene",
+    "UpdateChunks",
+    "UpdateFonts",
+    "ProcessAudicles",
+    "ProcessUAVMovement"
+  ]
+}
