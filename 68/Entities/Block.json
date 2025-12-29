@@ -1,0 +1,9 @@
+{
+  "name": "Block",
+  "isBlock": true,
+  "isChunkable": true,
+  "isAnimated": false,
+  "hasWireframe": false,
+  "isOccluder": true,
+  "dampingFactor": 0.98
+}

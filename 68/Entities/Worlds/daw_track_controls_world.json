@@ -1,0 +1,2655 @@
+{
+  "name": "DAWTrackControlsWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        70.0,
+        260.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "clear",
+      "actionValue": "0",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        70.0,
+        260.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "C",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        120.0,
+        260.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "input",
+      "actionValue": "0",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        120.0,
+        260.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "textType": "VariableUI",
+      "textKey": "daw_in_1"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        180.0,
+        260.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "arm",
+      "actionValue": "0",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        180.0,
+        260.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        230.0,
+        260.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "solo",
+      "actionValue": "0"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        230.0,
+        260.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        280.0,
+        260.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "mute",
+      "actionValue": "0"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        280.0,
+        260.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "M",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1460.0,
+        260.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "0:L",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1460.0,
+        260.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "L",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1500.0,
+        260.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "0:S",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1500.0,
+        260.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1540.0,
+        260.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "0:FF",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1540.0,
+        260.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "F",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1580.0,
+        260.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "0:R",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1580.0,
+        260.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        70.0,
+        332.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "clear",
+      "actionValue": "1",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        70.0,
+        332.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "C",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        120.0,
+        332.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "input",
+      "actionValue": "1",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        120.0,
+        332.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "textType": "VariableUI",
+      "textKey": "daw_in_2"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        180.0,
+        332.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "arm",
+      "actionValue": "1",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        180.0,
+        332.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        230.0,
+        332.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "solo",
+      "actionValue": "1"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        230.0,
+        332.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        280.0,
+        332.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "mute",
+      "actionValue": "1"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        280.0,
+        332.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "M",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1460.0,
+        332.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "1:L",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1460.0,
+        332.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "L",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1500.0,
+        332.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "1:S",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1500.0,
+        332.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1540.0,
+        332.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "1:FF",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1540.0,
+        332.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "F",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1580.0,
+        332.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "1:R",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1580.0,
+        332.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        70.0,
+        404.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "clear",
+      "actionValue": "2",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        70.0,
+        404.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "C",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        120.0,
+        404.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "input",
+      "actionValue": "2",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        120.0,
+        404.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "textType": "VariableUI",
+      "textKey": "daw_in_3"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        180.0,
+        404.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "arm",
+      "actionValue": "2",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        180.0,
+        404.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        230.0,
+        404.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "solo",
+      "actionValue": "2"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        230.0,
+        404.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        280.0,
+        404.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "mute",
+      "actionValue": "2"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        280.0,
+        404.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "M",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1460.0,
+        404.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "2:L",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1460.0,
+        404.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "L",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1500.0,
+        404.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "2:S",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1500.0,
+        404.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1540.0,
+        404.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "2:FF",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1540.0,
+        404.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "F",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1580.0,
+        404.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "2:R",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1580.0,
+        404.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        70.0,
+        476.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "clear",
+      "actionValue": "3",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        70.0,
+        476.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "C",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        120.0,
+        476.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "input",
+      "actionValue": "3",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        120.0,
+        476.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "textType": "VariableUI",
+      "textKey": "daw_in_4"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        180.0,
+        476.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "arm",
+      "actionValue": "3",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        180.0,
+        476.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        230.0,
+        476.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "solo",
+      "actionValue": "3"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        230.0,
+        476.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        280.0,
+        476.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "mute",
+      "actionValue": "3"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        280.0,
+        476.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "M",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1460.0,
+        476.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "3:L",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1460.0,
+        476.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "L",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1500.0,
+        476.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "3:S",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1500.0,
+        476.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1540.0,
+        476.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "3:FF",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1540.0,
+        476.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "F",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1580.0,
+        476.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "3:R",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1580.0,
+        476.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        70.0,
+        548.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "clear",
+      "actionValue": "4",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        70.0,
+        548.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "C",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        120.0,
+        548.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "input",
+      "actionValue": "4",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        120.0,
+        548.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "textType": "VariableUI",
+      "textKey": "daw_in_5"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        180.0,
+        548.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "arm",
+      "actionValue": "4",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        180.0,
+        548.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        230.0,
+        548.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "solo",
+      "actionValue": "4"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        230.0,
+        548.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        280.0,
+        548.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "mute",
+      "actionValue": "4"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        280.0,
+        548.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "M",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1460.0,
+        548.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "4:L",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1460.0,
+        548.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "L",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1500.0,
+        548.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "4:S",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1500.0,
+        548.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1540.0,
+        548.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "4:FF",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1540.0,
+        548.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "F",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1580.0,
+        548.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "4:R",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1580.0,
+        548.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        70.0,
+        620.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "clear",
+      "actionValue": "5",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        70.0,
+        620.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "C",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        120.0,
+        620.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "input",
+      "actionValue": "5",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        120.0,
+        620.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "textType": "VariableUI",
+      "textKey": "daw_in_6"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        180.0,
+        620.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "arm",
+      "actionValue": "5",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        180.0,
+        620.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        230.0,
+        620.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "solo",
+      "actionValue": "5"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        230.0,
+        620.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        280.0,
+        620.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "mute",
+      "actionValue": "5"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        280.0,
+        620.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "M",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1460.0,
+        620.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "5:L",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1460.0,
+        620.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "L",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1500.0,
+        620.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "5:S",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1500.0,
+        620.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1540.0,
+        620.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "5:FF",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1540.0,
+        620.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "F",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1580.0,
+        620.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "5:R",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1580.0,
+        620.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        70.0,
+        692.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "clear",
+      "actionValue": "6",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        70.0,
+        692.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "C",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        120.0,
+        692.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "input",
+      "actionValue": "6",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        120.0,
+        692.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "textType": "VariableUI",
+      "textKey": "daw_in_7"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        180.0,
+        692.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "arm",
+      "actionValue": "6",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        180.0,
+        692.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        230.0,
+        692.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "solo",
+      "actionValue": "6"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        230.0,
+        692.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        280.0,
+        692.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "mute",
+      "actionValue": "6"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        280.0,
+        692.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "M",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1460.0,
+        692.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "6:L",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1460.0,
+        692.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "L",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1500.0,
+        692.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "6:S",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1500.0,
+        692.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1540.0,
+        692.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "6:FF",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1540.0,
+        692.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "F",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1580.0,
+        692.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "6:R",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1580.0,
+        692.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        70.0,
+        764.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "clear",
+      "actionValue": "7",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        70.0,
+        764.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "C",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        120.0,
+        764.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "input",
+      "actionValue": "7",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        120.0,
+        764.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "textType": "VariableUI",
+      "textKey": "daw_in_8"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        180.0,
+        764.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "arm",
+      "actionValue": "7",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        180.0,
+        764.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        230.0,
+        764.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "solo",
+      "actionValue": "7"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        230.0,
+        764.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        280.0,
+        764.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "mute",
+      "actionValue": "7"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        280.0,
+        764.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "M",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1460.0,
+        764.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "7:L",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1460.0,
+        764.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "L",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1500.0,
+        764.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "7:S",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1500.0,
+        764.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1540.0,
+        764.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "7:FF",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1540.0,
+        764.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "F",
+      "textType": "UIOnly"
+    },
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [
+        1580.0,
+        764.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawTrack",
+      "actionKey": "output",
+      "actionValue": "7:R",
+      "buttonMode": "momentary"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1580.0,
+        764.0,
+        0.0
+      ],
+      "color": "White",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly"
+    }
+  ]
+}
