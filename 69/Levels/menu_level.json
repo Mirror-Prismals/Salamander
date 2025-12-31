@@ -1,0 +1,7 @@
+{
+  "worlds": [
+    "menu_sky_world.json",
+    "menu_button_world.json",
+    "ui_loading_world.json"
+  ]
+}
