@@ -1,0 +1,9 @@
+{
+    "init_steps": {},
+    "update_steps": {
+        "UpdateSoundtracks": {
+            "dependencies": ["AudioContext"]
+        }
+    },
+    "cleanup_steps": {}
+}

@@ -1,0 +1,12 @@
+{
+    "update_steps": {
+        "UpdateChunks": {
+            "dependencies": [
+                "LevelContext",
+                "InstanceContext",
+                "WorldContext",
+                "ChunkContext"
+            ]
+        }
+    }
+}
