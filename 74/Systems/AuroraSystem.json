@@ -1,0 +1,11 @@
+{
+  "update_steps": {
+    "RenderAuroras": {
+      "dependencies": [
+        "RendererContext",
+        "WorldContext",
+        "PlayerContext"
+      ]
+    }
+  }
+}
