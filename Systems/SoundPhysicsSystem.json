@@ -1,9 +1,0 @@
-{
-    "init_steps": {},
-    "update_steps": {
-        "UpdateSoundPhysics": {
-            "dependencies": ["RayTracedAudioContext", "PlayerContext", "AudioContext"]
-        }
-    },
-    "cleanup_steps": {}
-}

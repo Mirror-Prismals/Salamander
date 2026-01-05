@@ -1,8 +1,0 @@
-{
-    "init_steps": {},
-    "update_steps": {
-        "ProcessKeyboardInput": {
-            "dependencies": ["LevelContext", "InstanceContext"]
-        }
-    }
-}

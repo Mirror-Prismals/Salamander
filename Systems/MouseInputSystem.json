@@ -1,8 +1,0 @@
-{
-    "init_steps": {},
-    "update_steps": {
-        "UpdateCameraRotationFromMouse": {
-            "dependencies": ["PlayerContext"]
-        }
-    }
-}

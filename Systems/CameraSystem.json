@@ -1,8 +1,0 @@
-{
-    "init_steps": {},
-    "update_steps": {
-        "UpdateCameraMatrices": {
-            "dependencies": ["AppContext", "PlayerContext"]
-        }
-    }
-}

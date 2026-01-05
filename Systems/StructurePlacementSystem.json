@@ -1,7 +1,0 @@
-{
-  "init_steps": {
-    "ProcessStructurePlacement": {
-      "dependencies": ["LevelContext", "WorldContext"]
-    }
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "update_steps": {
-    "ResolveCollisions": {
-      "dependencies": ["PlayerContext", "LevelContext"]
-    }
-  }
-}

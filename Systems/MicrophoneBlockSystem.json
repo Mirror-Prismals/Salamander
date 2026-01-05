@@ -1,9 +1,0 @@
-{
-    "init_steps": {},
-    "update_steps": {
-        "UpdateMicrophoneBlocks": {
-            "dependencies": ["LevelContext", "RayTracedAudioContext", "PlayerContext", "UIContext"]
-        }
-    },
-    "cleanup_steps": {}
-}
