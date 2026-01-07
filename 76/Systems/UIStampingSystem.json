@@ -1,0 +1,14 @@
+{
+    "update_steps": {
+        "UpdateUIStamping": {
+            "dependencies": [
+                "LevelContext",
+                "InstanceContext",
+                "PlayerContext",
+                "UIContext",
+                "UIStampingContext",
+                "DawContext"
+            ]
+        }
+    }
+}
