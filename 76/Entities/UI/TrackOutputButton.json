@@ -1,0 +1,15 @@
+{
+  "name": "TrackOutputButton",
+  "isUIButton": true,
+  "isUI": true,
+  "isRenderable": false,
+  "isAudicle": false,
+  "isWorld": false,
+  "isMutable": false,
+  "uiStates": {
+    "bus_L": { "color": [0.35, 0.6, 0.95] },
+    "bus_S": { "color": [0.7, 0.4, 0.9] },
+    "bus_F": { "color": [0.4, 0.9, 0.4] },
+    "bus_R": { "color": [0.95, 0.45, 0.45] }
+  }
+}
