@@ -1,0 +1,12 @@
+{
+    "update_steps": {
+        "UpdateDawFaders": {
+            "dependencies": [
+                "UIContext",
+                "PanelContext",
+                "DawContext",
+                "DawFaderContext"
+            ]
+        }
+    }
+}
