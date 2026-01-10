@@ -1,0 +1,12 @@
+{
+  "name": "TrackSoloButton",
+  "isUIButton": true,
+  "isUI": true,
+  "isRenderable": false,
+  "isAudicle": false,
+  "isWorld": false,
+  "isMutable": false,
+  "uiStates": {
+    "active": { "color": [0.95, 0.9, 0.25] }
+  }
+}
