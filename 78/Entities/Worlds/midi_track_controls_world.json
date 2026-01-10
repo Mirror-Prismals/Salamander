@@ -1,0 +1,239 @@
+{
+  "name": "MidiTrackRowWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "TrackClearButton",
+      "position": [
+        70.0,
+        260.0,
+        0.0
+      ],
+      "color": "ButtonFront",
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawMidiTrack",
+      "actionKey": "clear",
+      "actionValue": "{track}",
+      "buttonMode": "momentary",
+      "controlId": "midi_track_{track}_clear",
+      "controlRole": "button",
+      "styleId": "track_button_clear"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        70.0,
+        260.0,
+        0.0
+      ],
+      "color": "MiraText",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "C",
+      "textType": "UIOnly",
+      "controlId": "midi_track_{track}_clear",
+      "controlRole": "label",
+      "styleId": "track_label"
+    },
+    {
+      "prototypeID": -1,
+      "name": "TrackInputButton",
+      "position": [
+        120.0,
+        260.0,
+        0.0
+      ],
+      "color": "ButtonFront",
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawMidiTrack",
+      "actionKey": "input",
+      "actionValue": "{track}",
+      "buttonMode": "momentary",
+      "controlId": "midi_track_{track}_input",
+      "controlRole": "button",
+      "styleId": "track_button_input"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        120.0,
+        260.0,
+        0.0
+      ],
+      "color": "MiraText",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "textType": "VariableUI",
+      "textKey": "midi_in_{track+1}",
+      "controlId": "midi_track_{track}_input",
+      "controlRole": "label",
+      "styleId": "track_label"
+    },
+    {
+      "prototypeID": -1,
+      "name": "TrackArmButton",
+      "position": [
+        180.0,
+        260.0,
+        0.0
+      ],
+      "color": "ButtonFront",
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawMidiTrack",
+      "actionKey": "arm",
+      "actionValue": "{track}",
+      "buttonMode": "momentary",
+      "controlId": "midi_track_{track}_arm",
+      "controlRole": "button",
+      "styleId": "track_button_arm"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        180.0,
+        260.0,
+        0.0
+      ],
+      "color": "MiraText",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "R",
+      "textType": "UIOnly",
+      "controlId": "midi_track_{track}_arm",
+      "controlRole": "label",
+      "styleId": "track_label"
+    },
+    {
+      "prototypeID": -1,
+      "name": "TrackSoloButton",
+      "position": [
+        230.0,
+        260.0,
+        0.0
+      ],
+      "color": "ButtonFront",
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawMidiTrack",
+      "actionKey": "solo",
+      "actionValue": "{track}",
+      "controlId": "midi_track_{track}_solo",
+      "controlRole": "button",
+      "styleId": "track_button_solo"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        230.0,
+        260.0,
+        0.0
+      ],
+      "color": "MiraText",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "S",
+      "textType": "UIOnly",
+      "controlId": "midi_track_{track}_solo",
+      "controlRole": "label",
+      "styleId": "track_label"
+    },
+    {
+      "prototypeID": -1,
+      "name": "TrackMuteButton",
+      "position": [
+        280.0,
+        260.0,
+        0.0
+      ],
+      "color": "ButtonFront",
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawMidiTrack",
+      "actionKey": "mute",
+      "actionValue": "{track}",
+      "controlId": "midi_track_{track}_mute",
+      "controlRole": "button",
+      "styleId": "track_button_mute"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        280.0,
+        260.0,
+        0.0
+      ],
+      "color": "MiraText",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "text": "M",
+      "textType": "UIOnly",
+      "controlId": "midi_track_{track}_mute",
+      "controlRole": "label",
+      "styleId": "track_label"
+    },
+    {
+      "prototypeID": -1,
+      "name": "TrackOutputButton",
+      "position": [
+        1460.0,
+        260.0,
+        0.0
+      ],
+      "color": "ButtonFront",
+      "size": [
+        18.0,
+        18.0,
+        6.0
+      ],
+      "action": "DawMidiTrack",
+      "actionKey": "output",
+      "actionValue": "{track}",
+      "buttonMode": "momentary",
+      "controlId": "midi_track_{track}_output",
+      "controlRole": "button",
+      "styleId": "track_button_output"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [
+        1460.0,
+        260.0,
+        0.0
+      ],
+      "color": "MiraText",
+      "size": 12.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "textType": "VariableUI",
+      "textKey": "midi_out_{track+1}",
+      "controlId": "midi_track_{track}_output",
+      "controlRole": "label",
+      "styleId": "track_label"
+    }
+  ]
+}
