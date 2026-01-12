@@ -1,0 +1,22 @@
+{
+    "update_steps": {
+        "UpdateMidiState": {
+            "dependencies": [
+                "MidiContext",
+                "DawContext",
+                "AudioContext",
+                "UIContext",
+                "LevelContext",
+                "WorldContext"
+            ]
+        }
+    },
+    "cleanup_steps": {
+        "CleanupMidiState": {
+            "dependencies": [
+                "MidiContext",
+                "AudioContext"
+            ]
+        }
+    }
+}
