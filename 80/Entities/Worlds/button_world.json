@@ -1,0 +1,103 @@
+{
+  "name": "UIButtonWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "Button",
+      "position": [517.5, 120.0, 0.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "size": [75.0, 75.0, 15.0],
+      "action": "DawTransport",
+      "actionKey": "rewind",
+      "buttonMode": "managed",
+      "controlId": "transport_rewind",
+      "controlRole": "button"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Button",
+      "position": [697.5, 120.0, 0.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "size": [75.0, 75.0, 15.0],
+      "action": "DawTransport",
+      "actionKey": "stop",
+      "buttonMode": "managed",
+      "controlId": "transport_stop",
+      "controlRole": "button"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Button",
+      "position": [877.5, 120.0, 0.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "size": [75.0, 75.0, 15.0],
+      "action": "DawTransport",
+      "actionKey": "record",
+      "buttonMode": "managed",
+      "controlId": "transport_record",
+      "controlRole": "button"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Button",
+      "position": [1057.5, 120.0, 0.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "size": [75.0, 75.0, 15.0],
+      "action": "DawTransport",
+      "actionKey": "play",
+      "buttonMode": "managed",
+      "controlId": "transport_play",
+      "controlRole": "button"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Glyph",
+      "position": [517.5, 120.0, 0.0],
+      "size": [75.0, 75.0, 0.0],
+      "color": "GlyphPlay",
+      "text": "Back",
+      "controlId": "transport_rewind",
+      "controlRole": "glyph"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Glyph",
+      "position": [697.5, 120.0, 0.0],
+      "size": [75.0, 75.0, 0.0],
+      "color": "GlyphStop",
+      "text": "Stop",
+      "controlId": "transport_stop",
+      "controlRole": "glyph"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Glyph",
+      "position": [877.5, 120.0, 0.0],
+      "size": [75.0, 75.0, 0.0],
+      "color": "GlyphRecord",
+      "text": "Record",
+      "controlId": "transport_record",
+      "controlRole": "glyph"
+    },
+    {
+      "prototypeID": -1,
+      "name": "Glyph",
+      "position": [1057.5, 120.0, 0.0],
+      "size": [75.0, 75.0, 0.0],
+      "color": "GlyphPlay",
+      "text": "Play",
+      "controlId": "transport_play",
+      "controlRole": "glyph"
+    }
+  ]
+}

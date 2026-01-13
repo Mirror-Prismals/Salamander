@@ -1,0 +1,17 @@
+{
+  "name": "DebugHudWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "Text",
+      "position": [80.0, 30.0, 0.0],
+      "color": "MiraText",
+      "size": 24.0,
+      "font": "AlegreyaSans-Regular.ttf",
+      "textType": "VariableText",
+      "textKey": "fps"
+    }
+  ]
+}
