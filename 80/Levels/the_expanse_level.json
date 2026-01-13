@@ -1,0 +1,9 @@
+{
+  "worlds": [
+    "expanse_terrain_world.json",
+    "expanse_water_world.json",
+    "expanse_trees_world.json",
+    "star_world.json",
+    "debug_hud_world.json"
+  ]
+}
