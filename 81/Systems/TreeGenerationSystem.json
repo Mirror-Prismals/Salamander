@@ -1,0 +1,12 @@
+{
+  "update_steps": {
+        "UpdateExpanseTrees": {
+          "dependencies": [
+            "LevelContext",
+            "InstanceContext",
+            "WorldContext",
+            "PlayerContext"
+          ]
+        }
+  }
+}

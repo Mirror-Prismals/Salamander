@@ -1,0 +1,13 @@
+{
+    "update_steps": {
+        "UpdateMidiLane": {
+            "dependencies": [
+                "MidiContext",
+                "DawContext",
+                "UIContext",
+                "RendererContext",
+                "WorldContext"
+            ]
+        }
+    }
+}
