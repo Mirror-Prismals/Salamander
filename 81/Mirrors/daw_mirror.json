@@ -1,0 +1,14 @@
+{
+  "name": "DawMirror",
+  "uiTransform": {
+    "scale": 1.0,
+    "offset": [0.0, 0.0]
+  },
+  "worldInstances": [
+    { "world": "daw_panel_world.json" },
+    { "world": "daw_screen_world.json" },
+    { "world": "button_world.json" },
+    { "world": "daw_track_controls_world.json" },
+    { "world": "midi_track_controls_world.json" }
+  ]
+}
