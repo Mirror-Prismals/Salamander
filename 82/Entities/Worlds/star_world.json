@@ -1,0 +1,12 @@
+
+{
+    "name": "StarWorld",
+    "isWorld": true,
+    "instances": [
+        {
+            "prototypeID": -1,
+            "name": "Star",
+            "count": 2000
+        }
+    ]
+}
