@@ -1,0 +1,21 @@
+{
+  "update_steps": {
+    "UpdateFonts": {
+      "dependencies": [
+        "RendererContext",
+        "WorldContext",
+        "LevelContext",
+        "FontContext",
+        "UIContext"
+      ]
+    }
+  },
+  "cleanup_steps": {
+    "CleanupFonts": {
+      "dependencies": [
+        "RendererContext",
+        "FontContext"
+      ]
+    }
+  }
+}
