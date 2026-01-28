@@ -1,0 +1,13 @@
+{
+  "name": "IslandMicrophoneWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "Microphone",
+      "position": [4.0, 80.0, 0.0],
+      "rotation": 180.0
+    }
+  ]
+}
