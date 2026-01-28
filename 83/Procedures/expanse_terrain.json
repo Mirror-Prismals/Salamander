@@ -1,0 +1,54 @@
+{
+  "worlds": {
+    "terrain": "ExpanseTerrainWorld",
+    "water": "ExpanseWaterWorld",
+    "trees": "ExpanseTreesWorld"
+  },
+  "noise": {
+    "continentalSeed": 1,
+    "elevationSeed": 2,
+    "ridgeSeed": 3,
+    "continentalScale": 100.0,
+    "elevationScale": 50.0,
+    "ridgeScale": 25.0
+  },
+  "terrain": {
+    "landThreshold": 0.48,
+    "waterSurface": 0.0,
+    "waterFloor": -96.0,
+    "minY": -1,
+    "islandCenterX": 0.0,
+    "islandCenterZ": 0.0,
+    "islandRadius": 1000.0,
+    "islandFalloff": 300.0,
+    "islandMaxHeight": 96.0,
+    "islandNoiseScale": 120.0,
+    "islandNoiseAmp": 24.0,
+    "beachHeight": 4.0,
+    "baseElevation": 8.0,
+    "baseRidge": 12.0,
+    "mountainElevation": 128.0,
+    "mountainRidge": 96.0,
+    "mountainMinX": -40,
+    "mountainMaxX": -20,
+    "oceanBands": [
+      {"minZ": 290, "maxZ": 1024},
+      {"minZ": -256, "maxZ": -200}
+    ],
+    "desertStartX": 160,
+    "snowStartZ": -160,
+    "soilDepth": 1,
+    "stoneDepth": 1
+  },
+  "colors": {
+    "grass": "Grass",
+    "sand": "Sand",
+    "snow": "White",
+    "soil": "Soil",
+    "stone": "Stone",
+    "water": "Water",
+    "wood": "Wood",
+    "leaf": "Leaf",
+    "seabed": "Sand"
+  }
+}
