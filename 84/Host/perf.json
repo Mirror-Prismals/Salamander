@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "intervalSeconds": 1.0,
+  "hitchThresholdMs": 16.0,
+  "allowlist": [
+    "UpdateDawTracks",
+    "UpdateButtons",
+    "ProcessPinkNoiseAudicle",
+    "RenderScene",
+    "UpdateChunks",
+    "UpdateFonts",
+    "ProcessAudicles",
+    "ProcessUAVMovement",
+    "ProcessRayTracedAudio",
+    "UpdateAudioRayVisualizer"
+  ]
+}
