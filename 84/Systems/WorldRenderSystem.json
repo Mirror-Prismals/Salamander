@@ -1,0 +1,9 @@
+{
+    "init_steps": {},
+    "update_steps": {
+        "RenderWorld": {
+            "dependencies": ["RendererContext", "PlayerContext", "WorldContext", "LevelContext"]
+        }
+    },
+    "cleanup_steps": {}
+}

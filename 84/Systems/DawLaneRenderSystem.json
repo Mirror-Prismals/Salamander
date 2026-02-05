@@ -1,0 +1,14 @@
+{
+    "update_steps": {
+        "UpdateDawLaneRender": {
+            "dependencies": [
+                "DawContext",
+                "UIContext",
+                "RendererContext",
+                "WorldContext",
+                "LevelContext",
+                "UIStampingContext"
+            ]
+        }
+    }
+}

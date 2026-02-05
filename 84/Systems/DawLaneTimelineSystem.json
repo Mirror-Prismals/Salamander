@@ -1,0 +1,9 @@
+{
+    "update_steps": {
+        "UpdateDawLaneTimeline": {
+            "dependencies": [
+                "DawContext"
+            ]
+        }
+    }
+}
