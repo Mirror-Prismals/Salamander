@@ -1,0 +1,15 @@
+{
+  "update_steps": {
+    "UpdateMirrors": {
+      "dependencies": [
+        "LevelContext",
+        "InstanceContext",
+        "WorldContext",
+        "MirrorContext",
+        "UIContext",
+        "FontContext",
+        "DawContext"
+      ]
+    }
+  }
+}

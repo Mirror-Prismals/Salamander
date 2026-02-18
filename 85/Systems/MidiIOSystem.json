@@ -1,0 +1,10 @@
+{
+    "update_steps": {
+        "UpdateMidiIO": {
+            "dependencies": [
+                "MidiContext",
+                "DawContext"
+            ]
+        }
+    }
+}

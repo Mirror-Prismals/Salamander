@@ -1,0 +1,12 @@
+{
+  "init_steps": {
+    "SetPlayerSpawn": {
+      "dependencies": ["PlayerContext", "LevelContext"]
+    }
+  },
+  "update_steps": {
+    "SetPlayerSpawn": {
+      "dependencies": ["PlayerContext", "LevelContext", "WorldContext"]
+    }
+  }
+}

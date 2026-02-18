@@ -1,0 +1,17 @@
+{
+    "init_steps": {
+        "InitializeVst3": {
+            "dependencies": ["AudioContext"]
+        }
+    },
+    "update_steps": {
+        "UpdateVst3": {
+            "dependencies": ["AudioContext"]
+        }
+    },
+    "cleanup_steps": {
+        "CleanupVst3": {
+            "dependencies": ["AudioContext"]
+        }
+    }
+}
