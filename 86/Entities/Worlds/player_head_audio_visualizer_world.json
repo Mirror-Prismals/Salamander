@@ -1,0 +1,12 @@
+{
+  "name": "PlayerHeadAudioVisualizerWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "AudioVisualizer",
+      "position": [0.0, 2.0, 0.0]
+    }
+  ]
+}

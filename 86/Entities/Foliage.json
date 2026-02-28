@@ -1,0 +1,29 @@
+[
+  {
+    "name": "GrassTuft",
+    "isBlock": true,
+    "isChunkable": true,
+    "isSolid": false,
+    "isAnimated": false,
+    "hasWireframe": false,
+    "isOccluder": false
+  },
+  {
+    "name": "GrassTuftShort",
+    "isBlock": true,
+    "isChunkable": true,
+    "isSolid": false,
+    "isAnimated": false,
+    "hasWireframe": false,
+    "isOccluder": false
+  },
+  {
+    "name": "Flower",
+    "isBlock": true,
+    "isChunkable": true,
+    "isSolid": false,
+    "isAnimated": false,
+    "hasWireframe": false,
+    "isOccluder": false
+  }
+]

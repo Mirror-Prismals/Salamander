@@ -1,0 +1,11 @@
+{
+  "name": "ExpanseTerrainWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    { "name": "DebugSlopeTexPosX", "position": [2.0, 144.0, 0.0] },
+    { "name": "DebugSlopeTexNegX", "position": [4.0, 144.0, 0.0] },
+    { "name": "DebugSlopeTexPosZ", "position": [6.0, 144.0, 0.0] },
+    { "name": "DebugSlopeTexNegZ", "position": [8.0, 144.0, 0.0] }
+  ]
+}

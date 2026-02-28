@@ -1,0 +1,15 @@
+{
+  "name": "UILoadingWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "LoadingBar",
+      "position": [960.0, 900.0, 0.0],
+      "color": "White",
+      "topColor": "DarkGray",
+      "size": [200.0, 10.0, 1.0]
+    }
+  ]
+}

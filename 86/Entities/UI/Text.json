@@ -1,0 +1,8 @@
+{
+  "name": "Text",
+  "isUI": true,
+  "isRenderable": false,
+  "isAudicle": false,
+  "isWorld": false,
+  "isMutable": false
+}
