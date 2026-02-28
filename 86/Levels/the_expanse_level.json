@@ -1,0 +1,16 @@
+{
+  "worlds": [
+    "expanse_terrain_world.json",
+    "expanse_water_world.json",
+    "expanse_trees_world.json",
+    "player_head_audio_visualizer_world.json",
+    "island_audio_visualizer_world.json",
+    "island_computer_block_world.json",
+    "island_microphone_world.json",
+    "star_world.json",
+    "debug_hud_world.json"
+  ],
+  "mirrors": [
+    "daw_mirror.json"
+  ]
+}
