@@ -1,0 +1,16 @@
+{
+    "audio_tracks": [
+        ["Spinn"],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    "midi_track": {
+        "instrument": "SyndtSphere",
+        "effects": []
+    }
+}

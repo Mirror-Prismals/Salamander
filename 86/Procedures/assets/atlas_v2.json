@@ -1,0 +1,158 @@
+{
+  "tileSize": [
+    24,
+    24
+  ],
+  "atlasSize": [
+    192,
+    144
+  ],
+  "tilesPerRow": 8,
+  "tilesPerCol": 6,
+  "blocks": {
+    "DebugBlock": {
+      "all": 0
+    },
+    "Grass": {
+      "all": 35
+    },
+    "Stone": {
+      "all": 3
+    },
+    "Sand": {
+      "all": 4
+    },
+    "Brick": {
+      "all": 5
+    },
+    "Cobblestone": {
+      "all": 6
+    },
+    "AmethystOre": {
+      "all": 28
+    },
+    "RubyOre": {
+      "all": 38
+    },
+    "FlouriteOre": {
+      "all": 37
+    },
+    "SilverOre": {
+      "all": 42
+    },
+    "GemRuby": {
+      "all": 46
+    },
+    "GemAmethyst": {
+      "all": 47
+    },
+    "GemFlourite": {
+      "all": 1
+    },
+    "GemSilver": {
+      "all": 2
+    },
+    "Lava": {
+      "all": 11
+    },
+    "FirLog1": {
+      "side": 12,
+      "top": 19,
+      "bottom": 19
+    },
+    "FirLog2": {
+      "side": 13,
+      "top": 19,
+      "bottom": 19
+    },
+    "SpruceLog1": {
+      "side": 14,
+      "top": 19,
+      "bottom": 19
+    },
+    "SpruceLog2": {
+      "side": 15,
+      "top": 19,
+      "bottom": 19
+    },
+    "SpruceLog3": {
+      "side": 16,
+      "top": 19,
+      "bottom": 19
+    },
+    "SpruceLog4": {
+      "side": 17,
+      "top": 19,
+      "bottom": 19
+    },
+    "OakLog": {
+      "side": 18,
+      "top": 19,
+      "bottom": 19
+    },
+    "StainedPlank": {
+      "all": 20
+    },
+    "WoodPlank1": {
+      "all": 21
+    },
+    "WoodPlank2": {
+      "all": 22
+    },
+    "WoodPlank3": {
+      "all": 23
+    },
+    "Cactus1": {
+      "side": 24,
+      "bottom": 26,
+      "top": 27
+    },
+    "Cactus2": {
+      "side": 25,
+      "bottom": 26,
+      "top": 27
+    },
+    "CobblestoneClimbingHolds": {
+      "all": 29
+    },
+    "CobblestoneRYBBlue": {
+      "all": 30
+    },
+    "CobblestoneRYBRed": {
+      "all": 31
+    },
+    "CobblestoneRYBYellow": {
+      "all": 32
+    },
+    "DirtExternal": {
+      "all": 33
+    },
+    "StoneExternal": {
+      "all": 34
+    },
+    "GrassTopV007": {
+      "all": 35
+    },
+    "LilypadV001": {
+      "all": 36
+    },
+    "ShortGrassV001": {
+      "all": 39
+    },
+    "ShortGrassV002": {
+      "all": 40
+    },
+    "ShortGrassV003": {
+      "all": 41
+    },
+    "TallGrassV001": {
+      "all": 43
+    },
+    "TallGrassV002": {
+      "all": 44
+    },
+    "TallGrassV003": {
+      "all": 45
+    }
+  }
+}

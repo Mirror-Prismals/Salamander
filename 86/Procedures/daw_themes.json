@@ -1,0 +1,37 @@
+{
+  "format": "salamander_theme_presets",
+  "selected_theme": "Default",
+  "themes": [
+    {
+      "background": "008080D9",
+      "builtin": true,
+      "button": "E6E0D4D9",
+      "lane": "E6E0D4FF",
+      "name": "Default",
+      "panel": "E6E0D4CC",
+      "piano_roll": "001F1FFF",
+      "piano_roll_accent": "003333FF"
+    },
+    {
+      "background": "1A0D0DE6",
+      "builtin": false,
+      "button": "CC2626CC",
+      "lane": "CC5A5AFF",
+      "name": "Default 2",
+      "panel": "B92323CC",
+      "piano_roll": "2B0E0EFF",
+      "piano_roll_accent": "7A1A1AFF"
+    },
+    {
+      "background": "0E1620E6",
+      "builtin": true,
+      "button": "E6B35FCC",
+      "lane": "E4D2B2FF",
+      "name": "Default 3",
+      "panel": "C7923CCC",
+      "piano_roll": "142233FF",
+      "piano_roll_accent": "274766FF"
+    }
+  ],
+  "version": 1
+}
