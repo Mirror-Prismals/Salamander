@@ -1,0 +1,10 @@
+{
+  "init_steps": {
+    "LoadLeyLines": {
+      "dependencies": [
+        "WorldContext",
+        "RegistryContext"
+      ]
+    }
+  }
+}

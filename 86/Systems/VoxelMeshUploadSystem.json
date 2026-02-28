@@ -1,0 +1,14 @@
+{
+    "update_steps": {
+        "UpdateVoxelMeshUpload": {
+            "dependencies": [
+                "RendererContext",
+                "PlayerContext",
+                "WorldContext",
+                "VoxelWorldContext",
+                "VoxelRenderContext",
+                "VoxelGreedyContext"
+            ]
+        }
+    }
+}

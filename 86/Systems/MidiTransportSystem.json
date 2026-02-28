@@ -1,0 +1,11 @@
+{
+    "update_steps": {
+        "UpdateMidiTransport": {
+            "dependencies": [
+                "MidiContext",
+                "UIContext",
+                "DawContext"
+            ]
+        }
+    }
+}

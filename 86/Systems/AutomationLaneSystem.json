@@ -1,0 +1,14 @@
+{
+    "update_steps": {
+        "UpdateAutomationLane": {
+            "dependencies": [
+                "DawContext",
+                "UIContext",
+                "RendererContext",
+                "WorldContext",
+                "LevelContext",
+                "PanelContext"
+            ]
+        }
+    }
+}
