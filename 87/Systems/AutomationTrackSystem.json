@@ -1,0 +1,10 @@
+{
+    "update_steps": {
+        "UpdateAutomationTracks": {
+            "dependencies": [
+                "DawContext",
+                "UIContext"
+            ]
+        }
+    }
+}

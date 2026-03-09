@@ -1,0 +1,11 @@
+{
+    "update_steps": {
+        "UpdatePianoRollInput": {
+            "dependencies": [
+                "UIContext",
+                "MidiContext",
+                "DawContext"
+            ]
+        }
+    }
+}

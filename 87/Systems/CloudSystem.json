@@ -1,0 +1,11 @@
+{
+  "update_steps": {
+    "RenderClouds": {
+      "dependencies": [
+        "RendererContext",
+        "WorldContext",
+        "PlayerContext"
+      ]
+    }
+  }
+}

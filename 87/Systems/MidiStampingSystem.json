@@ -1,0 +1,12 @@
+{
+    "update_steps": {
+        "UpdateMidiStamping": {
+            "dependencies": [
+                "MidiContext",
+                "DawContext",
+                "LevelContext",
+                "UIStampingContext"
+            ]
+        }
+    }
+}

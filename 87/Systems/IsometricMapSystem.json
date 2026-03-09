@@ -1,0 +1,8 @@
+{
+    "update_steps": {
+        "UpdateIsometricMap": {
+            "dependencies": ["PlayerContext", "RegistryContext"]
+        }
+    }
+}
+

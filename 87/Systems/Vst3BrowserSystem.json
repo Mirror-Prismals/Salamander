@@ -1,0 +1,16 @@
+{
+  "update_steps": {
+    "UpdateVst3Browser": {
+      "dependencies": [
+        "UIContext",
+        "PanelContext",
+        "LevelContext",
+        "InstanceContext",
+        "Vst3Context",
+        "DawContext",
+        "MidiContext",
+        "DawFaderContext"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "update_steps": {
+        "UpdateMidiUi": {
+            "dependencies": [
+                "MidiContext",
+                "AudioContext",
+                "UIContext",
+                "LevelContext",
+                "PanelContext",
+                "FontContext"
+            ]
+        }
+    }
+}

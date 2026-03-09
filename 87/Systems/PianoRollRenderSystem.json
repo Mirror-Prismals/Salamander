@@ -1,0 +1,13 @@
+{
+    "update_steps": {
+        "UpdatePianoRollRender": {
+            "dependencies": [
+                "UIContext",
+                "RendererContext",
+                "WorldContext",
+                "MidiContext",
+                "DawContext"
+            ]
+        }
+    }
+}

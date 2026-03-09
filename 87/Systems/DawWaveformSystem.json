@@ -1,0 +1,9 @@
+{
+    "update_steps": {
+        "UpdateDawWaveforms": {
+            "dependencies": [
+                "DawContext"
+            ]
+        }
+    }
+}

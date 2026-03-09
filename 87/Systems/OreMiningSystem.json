@@ -1,0 +1,11 @@
+{
+    "update_steps": {
+        "UpdateOreMining": {
+            "dependencies": [
+                "LevelContext",
+                "PlayerContext",
+                "RendererContext"
+            ]
+        }
+    }
+}

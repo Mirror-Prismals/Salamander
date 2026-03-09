@@ -1,0 +1,21 @@
+{
+    "init_steps": {
+        "GenerateTerrain": {
+            "dependencies": [
+                "LevelContext",
+                "InstanceContext",
+                "WorldContext"
+            ]
+        }
+    },
+    "update_steps": {
+        "UpdateExpanseTerrain": {
+            "dependencies": [
+                "LevelContext",
+                "InstanceContext",
+                "WorldContext",
+                "PlayerContext"
+            ]
+        }
+    }
+}
