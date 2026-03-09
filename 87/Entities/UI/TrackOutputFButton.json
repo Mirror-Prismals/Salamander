@@ -1,0 +1,12 @@
+{
+  "name": "TrackOutputFButton",
+  "isUIButton": true,
+  "isUI": true,
+  "isRenderable": false,
+  "isAudicle": false,
+  "isWorld": false,
+  "isMutable": false,
+  "uiStates": {
+    "selected": { "color": [0.4, 0.9, 0.4] }
+  }
+}

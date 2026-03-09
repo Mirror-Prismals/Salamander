@@ -1,0 +1,19 @@
+{
+  "name": "MenuButtonWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "ActionButton",
+      "position": [960.0, 540.0, 0.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "size": [90.0, 90.0, 18.0],
+      "action": "SetRegistry",
+      "actionKey": "level",
+      "actionValue": "frog"
+    }
+  ]
+}
