@@ -1,0 +1,39 @@
+{
+  "worlds": {
+    "NoiseWorld": {
+      "mode": "perlin_cube",
+      "dimensions": [16, 16, 16],
+      "origin": [0.0, 3.0, 0.0],
+      "frequency": 0.35,
+      "threshold": 0.0,
+      "blockType": "Block",
+      "color": "Magenta",
+      "seed": 2025
+    },
+    "IslandWorld": {
+      "mode": "island",
+      "size": [180, 180],
+      "origin": [0.0, 2.0, 0.0],
+      "seaLevel": 4.0,
+      "amplitude": 26.0,
+      "ridgeFactor": 4.5,
+      "continentalScale": 160.0,
+      "elevationScale": 60.0,
+      "ridgeScale": 24.0,
+      "threshold": 0.32,
+      "radius": 90.0,
+      "oceanDepth": 8.0,
+      "continentalSeed": 8,
+      "elevationSeed": 12,
+      "ridgeSeed": 21,
+      "surfaceBlockType": "Block",
+      "subsurfaceBlockType": "Block",
+      "seabedBlockType": "Block",
+      "waterBlockType": "Water",
+      "surfaceColor": "Grass",
+      "subsurfaceColor": "Soil",
+      "seabedColor": "Sand",
+      "waterColor": "Water"
+    }
+  }
+}
