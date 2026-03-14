@@ -1,0 +1,889 @@
+{
+  "tileSize": [
+    24,
+    24
+  ],
+  "atlasSize": [
+    192,
+    936
+  ],
+  "tilesPerRow": 8,
+  "tilesPerCol": 39,
+  "blocks": {
+    "DebugBlock": {
+      "all": 0
+    },
+    "Grass": {
+      "all": 73
+    },
+    "MeadowGrassBlock": {
+      "all": 35
+    },
+    "JungleGrassBlock": {
+      "top": 1,
+      "bottom": 65,
+      "side": 2
+    },
+    "JungleGrassTop": {
+      "all": 1
+    },
+    "Stone": {
+      "all": 3
+    },
+    "Sand": {
+      "all": 4
+    },
+    "BeachSand": {
+      "all": 4
+    },
+    "SeabedSand": {
+      "all": 2
+    },
+    "DesertSandDuneBlindV010": {
+      "all": 4
+    },
+    "Brick": {
+      "all": 5
+    },
+    "Cobblestone": {
+      "all": 6
+    },
+    "AmethystOre": {
+      "all": 28
+    },
+    "RubyOre": {
+      "all": 38
+    },
+    "FlouriteOre": {
+      "all": 37
+    },
+    "SilverOre": {
+      "all": 42
+    },
+    "GemRuby": {
+      "all": 68
+    },
+    "GemAmethyst": {
+      "all": 48
+    },
+    "GemFlourite": {
+      "all": 60
+    },
+    "GemSilver": {
+      "all": 69
+    },
+    "Lava": {
+      "all": 11
+    },
+    "FirLog1": {
+      "side": 12,
+      "top": 19,
+      "bottom": 19
+    },
+    "FirLog2": {
+      "side": 13,
+      "top": 19,
+      "bottom": 19
+    },
+    "SpruceLog1": {
+      "side": 14,
+      "top": 19,
+      "bottom": 19
+    },
+    "SpruceLog2": {
+      "side": 15,
+      "top": 19,
+      "bottom": 19
+    },
+    "SpruceLog3": {
+      "side": 16,
+      "top": 19,
+      "bottom": 19
+    },
+    "SpruceLog4": {
+      "side": 17,
+      "top": 19,
+      "bottom": 19
+    },
+    "OakLog": {
+      "side": 18,
+      "top": 19,
+      "bottom": 19
+    },
+    "StainedPlank": {
+      "all": 20
+    },
+    "WoodPlank1": {
+      "all": 21
+    },
+    "WoodPlank2": {
+      "all": 22
+    },
+    "WoodPlank3": {
+      "all": 23
+    },
+    "Cactus1": {
+      "side": 24,
+      "bottom": 26,
+      "top": 27
+    },
+    "Cactus2": {
+      "side": 25,
+      "bottom": 26,
+      "top": 27
+    },
+    "CobblestoneClimbingHolds": {
+      "all": 29
+    },
+    "CobblestoneRYBBlue": {
+      "all": 30
+    },
+    "CobblestoneRYBRed": {
+      "all": 31
+    },
+    "CobblestoneRYBYellow": {
+      "all": 32
+    },
+    "DirtExternal": {
+      "all": 33
+    },
+    "StoneExternal": {
+      "all": 34
+    },
+    "GrassTopV007": {
+      "all": 73
+    },
+    "LilypadV001": {
+      "all": 36
+    },
+    "ShortGrassV001": {
+      "all": 39
+    },
+    "ShortGrassV002": {
+      "all": 40
+    },
+    "ShortGrassV003": {
+      "all": 41
+    },
+    "TallGrassV001": {
+      "all": 43
+    },
+    "TallGrassV002": {
+      "all": 44
+    },
+    "TallGrassV003": {
+      "all": 45
+    },
+    "24x24AmethystBlockTexture": {
+      "all": 48
+    },
+    "24x24BackroomsBathroomTileV001": {
+      "all": 49
+    },
+    "24x24BackroomsCeilingTileV001": {
+      "all": 50
+    },
+    "24x24BackroomsCheckerVinyl": {
+      "all": 51
+    },
+    "24x24BackroomsDampCarpetV001": {
+      "all": 52
+    },
+    "24x24BackroomsDrainGrateV001": {
+      "all": 53
+    },
+    "24x24BackroomsFluorescentPanelV001": {
+      "all": 54
+    },
+    "24x24BackroomsMoldCornerTileV001": {
+      "all": 55
+    },
+    "24x24BackroomsPeelingPaintWallV001": {
+      "all": 56
+    },
+    "24x24BackroomsPoolTileFrutigerV001": {
+      "all": 57
+    },
+    "24x24BackroomsWarpedLinoleumV001": {
+      "all": 58
+    },
+    "24x24BackroomsWaterloggedConcreteV001": {
+      "all": 59
+    },
+    "24x24FlouriteBlockTexture": {
+      "all": 60
+    },
+    "24x24ForestFloorAlternate": {
+      "all": 61
+    },
+    "24x24FrostedGlassBlock": {
+      "all": 62
+    },
+    "24x24GraniteTexture": {
+      "all": 63
+    },
+    "24x24MoonstoneTexture": {
+      "all": 64
+    },
+    "24x24MossyCobblestone": {
+      "all": 65
+    },
+    "24x24ObsidianTexture": {
+      "all": 66
+    },
+    "24x24OxidizedCopperBlock": {
+      "all": 67
+    },
+    "24x24RubyBlockTexture": {
+      "all": 68
+    },
+    "24x24SilverBlockTexture": {
+      "all": 69
+    },
+    "24x24SnowyGrassTop": {
+      "all": 70
+    },
+    "24x24VolcanicBasaltPolished": {
+      "all": 71
+    },
+    "24x24WaterTextureWithOpacity": {
+      "all": 72
+    },
+    "24x24Zt1ConiferForestFloorV001": {
+      "all": 73
+    },
+    "24x24Zt1ConiferShortGrassSideV001": {
+      "all": 74
+    },
+    "24x24Zt1ConiferShortGrassSideV002": {
+      "all": 75
+    },
+    "24x24Zt1ConiferShortGrassSideV003": {
+      "all": 76
+    },
+    "24x24Zt1ConiferTallGrassSideV001": {
+      "all": 77
+    },
+    "24x24Zt1ConiferTallGrassSideV002": {
+      "all": 78
+    },
+    "24x24Zt1ConiferTallGrassSideV003": {
+      "all": 79
+    },
+    "24x24Zt1FernUndergrowthSide": {
+      "all": 80
+    },
+    "24x24Zt1PathwayDirtV001": {
+      "all": 81
+    },
+    "24x24Zt1ScrubGrassSideV001": {
+      "all": 82
+    },
+    "24x24Zt1ShortGrassSideV002": {
+      "all": 83
+    },
+    "24x24Zt1ShortGrassSideV003": {
+      "all": 84
+    },
+    "24x24Zt1ShortGrassSideV004": {
+      "all": 85
+    },
+    "24x24Zt1SwampFloor": {
+      "all": 86
+    },
+    "24x24Zt1TallGrassSideV001": {
+      "all": 87
+    },
+    "24x24Zt1TallGrassSideV002": {
+      "all": 88
+    },
+    "24x24Zt1TallGrassSideV003": {
+      "all": 89
+    },
+    "24x24Zt1WetMudV001": {
+      "all": 90
+    },
+    "24x24PetalsSurfacePluckedCoralV001": {
+      "all": 96
+    },
+    "24x24PetalsSurfacePluckedCreamV001": {
+      "all": 97
+    },
+    "24x24PetalsSurfacePluckedGoldV001": {
+      "all": 98
+    },
+    "24x24PetalsSurfacePluckedLilacV001": {
+      "all": 99
+    },
+    "24x24PetalsSurfacePluckedMarigoldV001": {
+      "all": 100
+    },
+    "24x24PinkPetalsSurfacePluckedV003": {
+      "all": 101
+    },
+    "24x24RubyHeartHealthbarSelectedRgba24x24K": {
+      "all": 104
+    },
+    "24x24AutumnLeafLitterBackgroundV001": {
+      "all": 105
+    },
+    "24x24AutumnLeafLitterRgbaV001": {
+      "all": 106
+    },
+    "24x24AutumnLeafLitterRgbaV002": {
+      "all": 107
+    },
+    "24x24CharredGroundV001": {
+      "all": 108
+    },
+    "24x24ChessBoard": {
+      "all": 109
+    },
+    "24x24DriedHfYoungClematisBrownStage3SelectedRgba24x24H": {
+      "all": 110
+    },
+    "24x24DriedHfYoungClematisStage1SelectedRgba24x24F": {
+      "all": 111
+    },
+    "24x24DriedHfYoungClematisStage2SelectedRgba24x24G": {
+      "all": 112
+    },
+    "24x24DryCrackedClayV001": {
+      "all": 113
+    },
+    "24x24FireTextureV001": {
+      "all": 114
+    },
+    "24x24FireTextureV002": {
+      "all": 115
+    },
+    "24x24FireTextureV003": {
+      "all": 116
+    },
+    "24x24FireTextureV004": {
+      "all": 117
+    },
+    "24x24FireTextureV005": {
+      "all": 118
+    },
+    "24x24ForgetMeNotMyosotisV001": {
+      "all": 119
+    },
+    "24x24ForgetMeNotMyosotisV002": {
+      "all": 120
+    },
+    "24x24ForgetMeNotMyosotisV003": {
+      "all": 121
+    },
+    "24x24ForgetMeNotMyosotisV004": {
+      "all": 122
+    },
+    "24x24ForgetMeNotMyosotisV006": {
+      "all": 123
+    },
+    "24x24ForgetMeNotMyosotisV008": {
+      "all": 124
+    },
+    "24x24ForgetMeNotMyosotisV009": {
+      "all": 125
+    },
+    "24x24GlowingRuneStoneV001": {
+      "all": 126
+    },
+    "24x24HfYoungClematis8TepalsAllVariedSelectedRgba24x24E": {
+      "all": 127
+    },
+    "24x24IceCrackedV001": {
+      "all": 128
+    },
+    "24x24LavaTextureImprovedV001": {
+      "all": 129
+    },
+    "24x24LushMossMatV001": {
+      "all": 130
+    },
+    "24x24LushMossMatV002": {
+      "all": 131
+    },
+    "24x24NeonCircuitBoardV001": {
+      "all": 132
+    },
+    "24x24NeonCircuitBoardV002": {
+      "all": 133
+    },
+    "24x24PebblePathBackgroundV001": {
+      "all": 134
+    },
+    "24x24PebblePathRgbaV001": {
+      "all": 135
+    },
+    "24x24PebblePathRgbaV002": {
+      "all": 136
+    },
+    "24x24PebblePathV001": {
+      "all": 137
+    },
+    "24x24PixelArtMoldyOrangeSelectedRgba24x24J": {
+      "all": 138
+    },
+    "24x24PixelArtOrangeLeafAdjustedSelectedRgba24x24I": {
+      "all": 139
+    },
+    "24x24PolishedGraniteV001": {
+      "all": 140
+    },
+    "24x24PolishedGraniteV002": {
+      "all": 141
+    },
+    "24x24PolishedGraniteV003": {
+      "all": 142
+    },
+    "24x24RctCoasterHalftrackRailLeftV001": {
+      "all": 143
+    },
+    "24x24RctCoasterHalftrackRailRightV001": {
+      "all": 144
+    },
+    "24x24RctModernCoasterHalftrackRailLeftV001": {
+      "all": 145
+    },
+    "24x24RctModernCoasterHalftrackRailRightV001": {
+      "all": 146
+    },
+    "24x24RctModernCoasterHalftrackRgbaRailLeftV003": {
+      "all": 147
+    },
+    "24x24RctModernCoasterHalftrackRgbaRailRightV003": {
+      "all": 148
+    },
+    "24x24RctModernSupportTubeRgbaV001": {
+      "all": 149
+    },
+    "24x24RctQueueTileV001": {
+      "all": 150
+    },
+    "24x24RctSteelSupportRgbaV001": {
+      "all": 151
+    },
+    "24x24RctWoodPlanksV001": {
+      "all": 152
+    },
+    "24x24RustedMetalPlateV001": {
+      "all": 153
+    },
+    "24x24SandstoneLayeredV001": {
+      "all": 154
+    },
+    "24x24ScaffoldingBlockV001": {
+      "all": 155
+    },
+    "24x24ScoriaTextureLowVesicleV005": {
+      "all": 156
+    },
+    "24x24SnowCompactedV001": {
+      "all": 157
+    },
+    "24x24SolarPanelV001": {
+      "all": 158
+    },
+    "24x24StopSignPostRgbaV002": {
+      "all": 159
+    },
+    "24x24StopSignRgba": {
+      "all": 160
+    },
+    "24x24WhiteMarbleVeinedV001": {
+      "all": 161
+    },
+    "24x24WroughtIronCellTowerTileableV001": {
+      "all": 162
+    },
+    "ZeldaCavePot": {
+      "all": 167
+    },
+    "24x24JungleTallGrassSideV001": {
+      "all": 168
+    },
+    "24x24JungleTallGrassSideV002": {
+      "all": 169
+    },
+    "24x24JungleTallGrassSideV003": {
+      "all": 170
+    },
+    "BlueprintAxehead": {
+      "all": 171
+    },
+    "BlueprintHilt": {
+      "all": 172
+    },
+    "BlueprintPickaxe": {
+      "all": 173
+    },
+    "BlueprintScythe": {
+      "all": 174
+    },
+    "BlueprintSword": {
+      "all": 175
+    },
+    "24x24AxeheadStencil": {
+      "all": 176
+    },
+    "24x24BarnacleClusterRgbaV001": {
+      "all": 177
+    },
+    "24x24BlueprintsBlankTextureV001": {
+      "all": 178
+    },
+    "24x24BoulderingJugRgbaTinyV001": {
+      "all": 179
+    },
+    "24x24BoulderingJugRgbaTinyV002": {
+      "all": 180
+    },
+    "24x24BoulderingJugRgbaTinyV004": {
+      "all": 181
+    },
+    "24x24BoulderingJugRgbaTinyV005": {
+      "all": 182
+    },
+    "24x24CautionFloorTileV001": {
+      "all": 183
+    },
+    "24x24ChainlinkFenceRgbaV001": {
+      "all": 184
+    },
+    "24x24ChalkBlockV001": {
+      "all": 185
+    },
+    "24x24ChalkFloorCornerRgbaV002": {
+      "all": 186
+    },
+    "24x24ChalkFloorCrossRgbaV002": {
+      "all": 187
+    },
+    "24x24ChalkFloorDotRgbaV001": {
+      "all": 188
+    },
+    "24x24ChalkFloorEndRgbaV002": {
+      "all": 189
+    },
+    "24x24ChalkFloorStraightRgbaV001": {
+      "all": 190
+    },
+    "24x24ChalkFloorTjunctionRgbaV002": {
+      "all": 191
+    },
+    "24x24ChestFrontV001": {
+      "all": 192
+    },
+    "24x24ChestSideV001": {
+      "all": 193
+    },
+    "24x24ChestTopV001": {
+      "all": 194
+    },
+    "24x24ClayBlockV001": {
+      "all": 195
+    },
+    "24x24ConcreteSupportPillarV001": {
+      "all": 196
+    },
+    "24x24ConiferBranchDoubleRgbaBottomV001": {
+      "all": 197
+    },
+    "24x24ConiferBranchDoubleRgbaTopV001": {
+      "all": 198
+    },
+    "24x24ConiferSaplingDoubleBottomV001": {
+      "all": 199
+    },
+    "24x24ConiferSaplingDoubleTopV001": {
+      "all": 200
+    },
+    "24x24ConiferSaplingTripleBottomV001": {
+      "all": 201
+    },
+    "24x24ConiferSaplingTripleMiddleV001": {
+      "all": 202
+    },
+    "24x24ConiferSaplingTripleTopV001": {
+      "all": 203
+    },
+    "24x24CrateV001": {
+      "all": 204
+    },
+    "24x24CrushedShellPathV001": {
+      "all": 205
+    },
+    "24x24DoubleTallDoorAlphaWindowBottomV001": {
+      "all": 206
+    },
+    "24x24DoubleTallDoorAlphaWindowTopV001": {
+      "all": 207
+    },
+    "24x24EcheveriaElegansSideV001": {
+      "all": 208
+    },
+    "24x24FarmlandTopV001": {
+      "all": 209
+    },
+    "24x24FlaxSideDoubleBottomV001": {
+      "all": 210
+    },
+    "24x24FlaxSideDoubleTopV001": {
+      "all": 211
+    },
+    "24x24FlaxSideV001": {
+      "all": 212
+    },
+    "24x24FrutigerAquaGlassTileV001": {
+      "all": 213
+    },
+    "24x24FrutigerBubbleClusterRgbaV001": {
+      "all": 214
+    },
+    "24x24FrutigerChromeSwooshV001": {
+      "all": 215
+    },
+    "24x24FrutigerCleanPlasticPanelV001": {
+      "all": 216
+    },
+    "24x24FrutigerDewDropletsRgbaV001": {
+      "all": 217
+    },
+    "24x24GemcuttingTableFrontV001": {
+      "all": 218
+    },
+    "24x24GemcuttingTableSideV001": {
+      "all": 219
+    },
+    "24x24GemcuttingTableTopV001": {
+      "all": 220
+    },
+    "24x24HazardChevronPlateV001": {
+      "all": 221
+    },
+    "24x24HempSideDoubleBottomV001": {
+      "all": 222
+    },
+    "24x24HempSideDoubleTopV001": {
+      "all": 223
+    },
+    "24x24HempSideV001": {
+      "all": 224
+    },
+    "24x24HiltStencil": {
+      "all": 225
+    },
+    "24x24IvyWallOverlayRgbaV001": {
+      "all": 226
+    },
+    "24x24IvyWallOverlayRgbaV002": {
+      "all": 227
+    },
+    "24x24IvyWallOverlayRgbaV003": {
+      "all": 228
+    },
+    "24x24IvyWallOverlayRgbaV004": {
+      "all": 229
+    },
+    "24x24IvyWallOverlayRgbaV005": {
+      "all": 230
+    },
+    "24x24IvyWallOverlayRgbaV006": {
+      "all": 231
+    },
+    "24x24IvyWallOverlayRgbaV007": {
+      "all": 232
+    },
+    "24x24IvyWallOverlayRgbaV008": {
+      "all": 233
+    },
+    "24x24IvyWallOverlayRgbaV009": {
+      "all": 234
+    },
+    "24x24IvyWallOverlayRgbaV010": {
+      "all": 235
+    },
+    "24x24IvyWallOverlayRgbaV011": {
+      "all": 236
+    },
+    "24x24IvyWallOverlayRgbaV012": {
+      "all": 237
+    },
+    "24x24IvyWallOverlayRgbaV013": {
+      "all": 238
+    },
+    "24x24IvyWallOverlayRgbaV014": {
+      "all": 239
+    },
+    "24x24IvyWallOverlayRgbaV015": {
+      "all": 240
+    },
+    "24x24IvyWallOverlayRgbaV016": {
+      "all": 241
+    },
+    "24x24KelpBladesSideRgbaV001": {
+      "all": 242
+    },
+    "24x24LittleBluestemSideV001": {
+      "all": 243
+    },
+    "24x24LittleBluestemSideV002": {
+      "all": 244
+    },
+    "24x24LittleBluestemSideV003": {
+      "all": 245
+    },
+    "24x24LittleBluestemSideV004": {
+      "all": 246
+    },
+    "24x24LittleBluestemSideV005": {
+      "all": 247
+    },
+    "24x24MetalDrainGrateRgbaV001": {
+      "all": 248
+    },
+    "24x24MetalSawRgbaV001": {
+      "all": 249
+    },
+    "24x24MiningGemSparkleRgbaV001": {
+      "all": 250
+    },
+    "24x24MiningGemSparkleRgbaV002": {
+      "all": 251
+    },
+    "24x24MiningGemSparkleRgbaV003": {
+      "all": 252
+    },
+    "24x24MiningGemSparkleRgbaV004": {
+      "all": 253
+    },
+    "24x24NaviMonitorFrontRgbaModernV001": {
+      "all": 254
+    },
+    "24x24NaviMonitorModernBackRgbaV002": {
+      "all": 255
+    },
+    "24x24NaviMonitorModernBottomRgbaV002": {
+      "all": 256
+    },
+    "24x24NaviMonitorModernSideRgbaV002": {
+      "all": 257
+    },
+    "24x24NaviMonitorModernTopRgbaV002": {
+      "all": 258
+    },
+    "24x24OxidizedCopperPanelV001": {
+      "all": 259
+    },
+    "24x24PalmFrondSideDoubleRgbaBottomV001": {
+      "all": 260
+    },
+    "24x24PalmFrondSideDoubleRgbaTopV001": {
+      "all": 261
+    },
+    "24x24PalmFrondSideRgbaV001": {
+      "all": 262
+    },
+    "24x24PalmFrondSideTripleRgbaBottomV001": {
+      "all": 263
+    },
+    "24x24PalmFrondSideTripleRgbaMiddleV001": {
+      "all": 264
+    },
+    "24x24PalmFrondSideTripleRgbaTopV001": {
+      "all": 265
+    },
+    "24x24PennsylvaniaSedgeSideV001": {
+      "all": 266
+    },
+    "24x24PickaxeStencil": {
+      "all": 267
+    },
+    "24x24RopeNetRgbaV001": {
+      "all": 268
+    },
+    "24x24ScytheStencil": {
+      "all": 269
+    },
+    "24x24SeaUrchinRgbaV001": {
+      "all": 270
+    },
+    "24x24ShippingContainerPanelV001": {
+      "all": 271
+    },
+    "24x24SpadeStencil": {
+      "all": 272
+    },
+    "24x24SwordStencil": {
+      "all": 273
+    },
+    "24x24WetSandRipplesV001": {
+      "all": 274
+    },
+    "24x24WoodenBarrelSideV001": {
+      "all": 275
+    },
+    "24x24WorkbenchFrontV001": {
+      "all": 276
+    },
+    "24x24WorkbenchSideV001": {
+      "all": 277
+    },
+    "24x24WorkbenchTopV001": {
+      "all": 278
+    },
+    "24x24ZebraHaworthiaSideV001": {
+      "all": 279
+    },
+    "24x24ZeldaCavePotSidePlainRgbaV001": {
+      "all": 280
+    },
+    "24x24CattailsRgbaV001": {
+      "all": 288
+    },
+    "24x24CattailsSideDoubleRgbaBottomV001": {
+      "all": 289
+    },
+    "24x24CattailsSideDoubleRgbaTopV001": {
+      "all": 290
+    },
+    "24x24FernFrondRgbaV001": {
+      "all": 291
+    },
+    "24x24LanternBackRgbaV001": {
+      "all": 292
+    },
+    "24x24LanternBottomRgbaV001": {
+      "all": 293
+    },
+    "24x24LanternSideRgbaV001": {
+      "all": 294
+    },
+    "24x24LanternTopRgbaV001": {
+      "all": 295
+    },
+    "24x24ReedBundleTwineRgbaV001": {
+      "all": 296
+    },
+    "24x24ShaleLayeredV001": {
+      "all": 297
+    },
+    "24x24VendingMachineBackV001": {
+      "all": 298
+    },
+    "24x24VendingMachineBottomV001": {
+      "all": 299
+    },
+    "24x24VendingMachineSideV001": {
+      "all": 300
+    },
+    "24x24VendingMachineTopV001": {
+      "all": 301
+    },
+    "24x24LanternFaceRgbaV001": {
+      "all": 304
+    }
+  }
+}

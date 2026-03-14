@@ -1,0 +1,11 @@
+{
+  "id": "starter_build",
+  "world": "StructureDevWorld",
+  "bounds": {
+    "min": [-8, 0, -8],
+    "size": [16, 16, 16]
+  },
+  "output": "Structures/starter_build.json",
+  "capture": true,
+  "placement": true
+}
