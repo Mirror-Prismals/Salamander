@@ -1,0 +1,8 @@
+{
+  "worlds": [
+    "menu_sky_world.json"
+  ],
+  "mirrors": [
+    "menu_mirror.json"
+  ]
+}
