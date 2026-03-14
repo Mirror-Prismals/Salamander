@@ -1,0 +1,15 @@
+{
+    "update_steps": {
+        "UpdateDawUi": {
+            "dependencies": [
+                "DawContext",
+                "AudioContext",
+                "UIContext",
+                "LevelContext",
+                "UIStampingContext",
+                "PanelContext",
+                "FontContext"
+            ]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "update_steps": {
+        "UpdatePanels": {
+            "dependencies": [
+                "UIContext",
+                "PanelContext",
+                "PlayerContext",
+                "LevelContext"
+            ]
+        }
+    }
+}

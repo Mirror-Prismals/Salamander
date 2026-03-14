@@ -1,0 +1,20 @@
+{
+    "update_steps": {
+        "UpdateDawTracks": {
+            "dependencies": [
+                "DawContext",
+                "AudioContext",
+                "UIContext",
+                "MidiContext"
+            ]
+        }
+    },
+    "cleanup_steps": {
+        "CleanupDawTracks": {
+            "dependencies": [
+                "DawContext",
+                "AudioContext"
+            ]
+        }
+    }
+}
