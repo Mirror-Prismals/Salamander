@@ -1,0 +1,66 @@
+[
+  {
+    "name": "GrassTuft",
+    "isBlock": true,
+    "isChunkable": true,
+    "isSolid": false,
+    "useTexture": true,
+    "textureKey": "24x24Zt1ConiferTallGrassSideV001",
+    "isAnimated": false,
+    "hasWireframe": false,
+    "isOccluder": false
+  },
+  {
+    "name": "GrassTuftShort",
+    "isBlock": true,
+    "isChunkable": true,
+    "isSolid": false,
+    "useTexture": true,
+    "textureKey": "24x24Zt1ConiferShortGrassSideV001",
+    "isAnimated": false,
+    "hasWireframe": false,
+    "isOccluder": false
+  },
+  {
+    "name": "GrassTuftMeadow",
+    "isBlock": true,
+    "isChunkable": true,
+    "isSolid": false,
+    "useTexture": true,
+    "textureKey": "TallGrassV001",
+    "isAnimated": false,
+    "hasWireframe": false,
+    "isOccluder": false
+  },
+  {
+    "name": "GrassTuftShortMeadow",
+    "isBlock": true,
+    "isChunkable": true,
+    "isSolid": false,
+    "useTexture": true,
+    "textureKey": "ShortGrassV001",
+    "isAnimated": false,
+    "hasWireframe": false,
+    "isOccluder": false
+  },
+  {
+    "name": "GrassTuftJungle",
+    "isBlock": true,
+    "isChunkable": true,
+    "isSolid": false,
+    "useTexture": true,
+    "textureKey": "24x24JungleTallGrassSideV001",
+    "isAnimated": false,
+    "hasWireframe": false,
+    "isOccluder": false
+  },
+  {
+    "name": "Flower",
+    "isBlock": true,
+    "isChunkable": true,
+    "isSolid": false,
+    "isAnimated": false,
+    "hasWireframe": false,
+    "isOccluder": false
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "name": "TransparentWave",
+  "isBlock": true,
+  "isChunkable": true,
+  "isSolid": false,
+  "isAnimated": true,
+  "hasWireframe": false
+}

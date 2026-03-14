@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Face_PosX",
+    "isRenderable": true
+  },
+  {
+    "name": "Face_NegX",
+    "isRenderable": true
+  },
+  {
+    "name": "Face_PosY",
+    "isRenderable": true
+  },
+  {
+    "name": "Face_NegY",
+    "isRenderable": true
+  },
+  {
+    "name": "Face_PosZ",
+    "isRenderable": true
+  },
+  {
+    "name": "Face_NegZ",
+    "isRenderable": true
+  }
+]

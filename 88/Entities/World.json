@@ -1,0 +1,8 @@
+{
+  "name": "World",
+  "isRenderable": false,
+  "isWorld": true,
+  "isAudicle": false,
+  "isStar": false,
+  "instances": []
+}
