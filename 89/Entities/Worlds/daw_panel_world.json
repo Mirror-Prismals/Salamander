@@ -1,0 +1,51 @@
+{
+  "name": "DAWPanelWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "UIPanel",
+      "position": [0.0, 0.0, 0.0],
+      "size": [1.0, 1.0, 12.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "controlId": "panel_top",
+      "controlRole": "panel"
+    },
+    {
+      "prototypeID": -1,
+      "name": "UIPanel",
+      "position": [0.0, 0.0, 0.0],
+      "size": [1.0, 1.0, 12.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "controlId": "panel_bottom",
+      "controlRole": "panel"
+    },
+    {
+      "prototypeID": -1,
+      "name": "UIPanel",
+      "position": [0.0, 0.0, 0.0],
+      "size": [1.0, 1.0, 12.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "controlId": "panel_left",
+      "controlRole": "panel"
+    },
+    {
+      "prototypeID": -1,
+      "name": "UIPanel",
+      "position": [0.0, 0.0, 0.0],
+      "size": [1.0, 1.0, 12.0],
+      "color": "ButtonFront",
+      "topColor": "ButtonTopHighlight",
+      "sideColor": "ButtonSideShadow",
+      "controlId": "panel_right",
+      "controlRole": "panel"
+    }
+  ]
+}

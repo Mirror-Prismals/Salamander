@@ -1,0 +1,13 @@
+{
+  "name": "TrackArmButton",
+  "isUIButton": true,
+  "isUI": true,
+  "isRenderable": false,
+  "isAudicle": false,
+  "isWorld": false,
+  "isMutable": false,
+  "uiStates": {
+    "overdub": { "color": [0.75, 0.25, 0.25] },
+    "replace": { "color": [0.95, 0.55, 0.25] }
+  }
+}

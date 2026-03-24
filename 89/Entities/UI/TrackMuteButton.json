@@ -1,0 +1,12 @@
+{
+  "name": "TrackMuteButton",
+  "isUIButton": true,
+  "isUI": true,
+  "isRenderable": false,
+  "isAudicle": false,
+  "isWorld": false,
+  "isMutable": false,
+  "uiStates": {
+    "active": { "color": [0.6, 0.2, 0.2] }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "IslandComputerBlockWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": [
+    {
+      "prototypeID": -1,
+      "name": "Computer",
+      "position": [-6, 99.0, 10.0]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "DebugWorldGenerator",
+  "isRenderable": false,
+  "isWorld": false,
+  "isAudicle": true,
+  "isStar": false,
+  "instances": []
+}
