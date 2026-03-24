@@ -1,0 +1,10 @@
+{
+    "update_steps": {
+        "UpdateDawTransport": {
+            "dependencies": [
+                "DawContext",
+                "UIContext"
+            ]
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "update_steps": {
+    "ProcessStructureCapture": {
+      "dependencies": ["LevelContext", "WorldContext", "InstanceContext"]
+    }
+  }
+}

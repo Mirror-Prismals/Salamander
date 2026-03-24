@@ -1,0 +1,94 @@
+{
+    "update_steps": {
+        "01_RenderFontsTimeline": {
+            "dependencies": [
+                "UIContext",
+                "LevelContext",
+                "WorldContext",
+                "RendererContext",
+                "FontContext"
+            ]
+        },
+        "02_RenderSidePanels": {
+            "dependencies": [
+                "UIContext",
+                "PanelContext",
+                "LevelContext",
+                "WorldContext",
+                "RendererContext"
+            ]
+        },
+        "03_RenderButtonsSide": {
+            "dependencies": [
+                "UIContext",
+                "LevelContext",
+                "RendererContext",
+                "WorldContext"
+            ]
+        },
+        "04_RenderFontsSideButtons": {
+            "dependencies": [
+                "UIContext",
+                "LevelContext",
+                "WorldContext",
+                "RendererContext",
+                "FontContext"
+            ]
+        },
+        "05_RenderTopBottomPanels": {
+            "dependencies": [
+                "UIContext",
+                "PanelContext",
+                "LevelContext",
+                "WorldContext",
+                "RendererContext"
+            ]
+        },
+        "05a_RenderDecibelMeters": {
+            "dependencies": [
+                "UIContext",
+                "PanelContext",
+                "DawContext",
+                "DecibelMeterContext",
+                "DawFaderContext",
+                "WorldContext",
+                "RendererContext"
+            ]
+        },
+        "05b_RenderDawFaders": {
+            "dependencies": [
+                "UIContext",
+                "PanelContext",
+                "DawContext",
+                "DawFaderContext",
+                "WorldContext",
+                "RendererContext"
+            ]
+        },
+        "06_RenderButtonsTopBottom": {
+            "dependencies": [
+                "UIContext",
+                "LevelContext",
+                "RendererContext",
+                "WorldContext"
+            ]
+        },
+        "07_RenderFontsTopButtons": {
+            "dependencies": [
+                "UIContext",
+                "LevelContext",
+                "WorldContext",
+                "RendererContext",
+                "FontContext"
+            ]
+        }
+    },
+    "cleanup_steps": {
+        "CleanupFonts": {
+            "dependencies": [
+                "RendererContext",
+                "FontContext"
+            ]
+        }
+    }
+}
