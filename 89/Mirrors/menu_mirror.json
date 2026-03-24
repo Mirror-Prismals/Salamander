@@ -1,0 +1,11 @@
+{
+  "name": "MenuMirror",
+  "uiTransform": {
+    "scale": 1.0,
+    "offset": [0.0, 0.0]
+  },
+  "worldInstances": [
+    { "world": "menu_button_world.json" },
+    { "world": "ui_loading_world.json" }
+  ]
+}
