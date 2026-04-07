@@ -1,0 +1,12 @@
+{
+  "name": "ColorFaceBlockWorld",
+  "isWorld": true,
+  "instances": [
+    { "name": "Face_PosX", "position": [0.5, 40.0, 0.0], "color": "DebugRed" },
+    { "name": "Face_NegX", "position": [-0.5, 40.0, 0.0], "color": "Water" },
+    { "name": "Face_PosY", "position": [0.0, 40.5, 0.0], "color": "Grass" },
+    { "name": "Face_NegY", "position": [0.0, 39.5, 0.0], "color": "Magenta" },
+    { "name": "Face_PosZ", "position": [0.0, 40.0, 0.5], "color": "Stone" },
+    { "name": "Face_NegZ", "position": [0.0, 40.0, -0.5], "color": "Sand" }
+  ]
+}

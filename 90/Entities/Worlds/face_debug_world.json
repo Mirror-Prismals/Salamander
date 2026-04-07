@@ -1,0 +1,19 @@
+{
+  "name": "FaceDebugWorld",
+  "isWorld": true,
+  "instances": [
+    { "name": "Face_PosX", "position": [2, -10, 0], "color": "White" },
+    { "name": "Face_NegX", "position": [-2, -10, 0], "color": "White" },
+    { "name": "Face_PosY", "position": [0, -8, 0], "color": "White" },
+    { "name": "Face_NegY", "position": [0, -12, 0], "color": "White" },
+    { "name": "Face_PosZ", "position": [0, -10, 2], "color": "White" },
+    { "name": "Face_NegZ", "position": [0, -10, -2], "color": "White" },
+
+    { "name": "Face_PosX", "position": [0, -10, 0], "color": "Grass" },
+    { "name": "Face_NegX", "position": [0, -10, 0], "color": "Grass" },
+    { "name": "Face_PosY", "position": [0, -10, 0], "color": "Grass" },
+    { "name": "Face_NegY", "position": [0, -10, 0], "color": "Grass" },
+    { "name": "Face_PosZ", "position": [0, -10, 0], "color": "Grass" },
+    { "name": "Face_NegZ", "position": [0, -10, 0], "color": "Grass" }
+  ]
+}

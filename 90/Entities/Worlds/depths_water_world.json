@@ -1,0 +1,6 @@
+{
+  "name": "DepthsWaterWorld",
+  "isWorld": true,
+  "isVolume": false,
+  "instances": []
+}

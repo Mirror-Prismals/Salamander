@@ -1,0 +1,10 @@
+{
+  "name": "Computer",
+  "isBlock": true,
+  "isAudicle": true,
+  "isRenderable": true,
+  "isSolid": true,
+  "useTexture": true,
+  "textureKey": "24x24NaviMonitorModernSideRgbaV002",
+  "dampingFactor": 0.9
+}

@@ -1,0 +1,10 @@
+{
+  "name": "SecurityCamera",
+  "isBlock": true,
+  "isRenderable": true,
+  "isSolid": true,
+  "isOccluder": true,
+  "useTexture": true,
+  "textureKey": "24x24NaviMonitorModernSideRgbaV002",
+  "dampingFactor": 0.9
+}

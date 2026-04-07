@@ -1,0 +1,11 @@
+{
+  "name": "Leaf",
+  "isBlock": true,
+  "isChunkable": true,
+  "isSolid": false,
+  "useTexture": true,
+  "textureKey": "24x24PineLeafBlockRgbaV002",
+  "isAnimated": false,
+  "hasWireframe": false,
+  "isOccluder": false
+}

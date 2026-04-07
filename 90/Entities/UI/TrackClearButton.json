@@ -1,0 +1,9 @@
+{
+  "name": "TrackClearButton",
+  "isUIButton": true,
+  "isUI": true,
+  "isRenderable": false,
+  "isAudicle": false,
+  "isWorld": false,
+  "isMutable": false
+}
