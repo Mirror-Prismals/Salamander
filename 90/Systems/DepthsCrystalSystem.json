@@ -1,0 +1,13 @@
+{
+  "init_steps": {},
+  "update_steps": {
+    "UpdateDepthsCrystals": {
+      "dependencies": [
+        "LevelContext",
+        "VoxelWorldContext",
+        "WorldContext"
+      ]
+    }
+  }
+}
+

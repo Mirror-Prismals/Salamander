@@ -1,0 +1,13 @@
+{
+    "init_steps": {
+        "InitializeRenderer": {
+            "dependencies": ["RendererContext", "WorldContext"]
+        }
+    },
+    "update_steps": {},
+    "cleanup_steps": {
+        "CleanupRenderer": {
+            "dependencies": ["RendererContext"]
+        }
+    }
+}

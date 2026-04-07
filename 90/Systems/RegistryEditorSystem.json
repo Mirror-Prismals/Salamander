@@ -1,0 +1,12 @@
+{
+    "update_steps": {
+        "UpdateRegistry": {
+            "dependencies": [
+                "UIContext",
+                "LevelContext",
+                "RendererContext",
+                "WorldContext"
+            ]
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "init_steps": {
+        "LoadBlockTextures": {
+            "dependencies": ["RendererContext", "WorldContext"]
+        }
+    }
+}

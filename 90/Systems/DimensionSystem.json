@@ -1,0 +1,14 @@
+{
+  "init_steps": {},
+  "update_steps": {
+    "UpdateDimension": {
+      "dependencies": [
+        "LevelContext",
+        "WorldContext",
+        "VoxelWorldContext",
+        "PlayerContext"
+      ]
+    }
+  },
+  "cleanup_steps": {}
+}
