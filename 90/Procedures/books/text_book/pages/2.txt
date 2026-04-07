@@ -1,0 +1,5 @@
+Book Controls
+
+Press R to inspect.
+Arrow Left and Arrow Right
+change pages.
